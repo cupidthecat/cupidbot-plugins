@@ -4,7 +4,7 @@ Lessons learned from debugging Hub plugins. Read this before chasing a "script s
 
 ## 1. Use the agent server. Stop guessing.
 
-The Microbot client embeds an HTTP agent server (port 8081, plugin name "Agent Server") that exposes the live scene cache, player state, inventory, NPCs, and dialogue. Two `curl` calls usually beat an hour of staring at code.
+The CupidBot client embeds an HTTP agent server (port 8081, plugin name "Agent Server") that exposes the live scene cache, player state, inventory, NPCs, and dialogue. Two `curl` calls usually beat an hour of staring at code.
 
 ```bash
 # What does the player actually see right now?
@@ -23,12 +23,12 @@ for o in data['objects']:
 "
 ```
 
-The CLI wrapper at `../Microbot/microbot-cli` handles login, inventory, NPCs, dialogue, walking, banking, and script lifecycle. See `docs/MICROBOT_CLI.md` for the command reference.
+The CLI wrapper at `../CupidBot/cupidbot-cli` handles login, inventory, NPCs, dialogue, walking, banking, and script lifecycle. See `docs/CUPIDBOT_CLI.md` for the command reference.
 
 **The rule:** if a "script does nothing" bug has gone past two rounds of theorizing, stop and inspect the live state. Don't reason about what *should* be in the cache; ask the cache.
 
 ### Pitfall: the CLI is missing some flags
-The `microbot-cli objects` command currently ignores `--id` and `--distance` flags and just dumps the raw `/objects` endpoint with defaults. Use `curl` directly when you need precise filtering. The server-side parameters are documented in `docs/AGENT_SERVER.md`; for `/objects` they're `name`, `maxDistance` (default 20), `limit`.
+The `cupidbot-cli objects` command currently ignores `--id` and `--distance` flags and just dumps the raw `/objects` endpoint with defaults. Use `curl` directly when you need precise filtering. The server-side parameters are documented in `docs/AGENT_SERVER.md`; for `/objects` they're `name`, `maxDistance` (default 20), `limit`.
 
 ## 2. Instanced regions are everywhere — and they break worldpoint math
 
@@ -48,7 +48,7 @@ client.getLocalPlayer().getWorldLocation()
 Rs2Player.getWorldLocation()
 ```
 
-The Microbot wrapper checks `getTopLevelWorldView().getScene().isInstance()` and translates via `WorldPoint.fromLocalInstance(...)`. The raw client call doesn't.
+The CupidBot wrapper checks `getTopLevelWorldView().getScene().isInstance()` and translates via `WorldPoint.fromLocalInstance(...)`. The raw client call doesn't.
 
 **TileObject coordinates always match the instance side**, because that's where the tile actually exists in the scene. So if you compute a target world point using `client.getLocalPlayer()...getRegionID()` (overworld region) and then try to match it against a tile object's `getWorldLocation()` (instance region), the lookup silently returns null. Forever.
 
@@ -61,7 +61,7 @@ The Microbot wrapper checks `getTopLevelWorldView().getScene().isInstance()` and
 ### How to detect that you're inside an instance
 
 ```java
-boolean instanced = Microbot.getClient().getTopLevelWorldView().getScene().isInstance();
+boolean instanced = CupidBot.getClient().getTopLevelWorldView().getScene().isInstance();
 ```
 
 Or just observe: if `Rs2Player.getWorldLocation()` is in the high-coord corner of the map (X > 6000 or so), you're in an instance.
@@ -73,7 +73,7 @@ Legacy `Rs2GameObject.clickObject(TileObject, action)` (and every `interact(...)
 ```java
 // inside Rs2GameObject.clickObject — line ~1728
 if (Rs2Player.getWorldLocation().distanceTo(object.getWorldLocation()) > 51) {
-    Microbot.log("...too far, walking to the object....");
+    CupidBot.log("...too far, walking to the object....");
     Rs2Walker.walkTo(object.getWorldLocation());
     return false;
 }
@@ -85,16 +85,16 @@ The new `Rs2TileObjectModel.click(action)` has **no equivalent**. It just dispat
 
 ```java
 private static boolean interactWithObject(int id, String action) {
-    Rs2TileObjectModel model = Microbot.getRs2TileObjectCache().query()
+    Rs2TileObjectModel model = CupidBot.getRs2TileObjectCache().query()
             .withId(id)
             .nearest();
     if (model == null) {
-        Microbot.log("Object id " + id + " not in scene");
+        CupidBot.log("Object id " + id + " not in scene");
         return false;
     }
     WorldPoint playerLoc = Rs2Player.getWorldLocation();
     if (playerLoc != null && playerLoc.distanceTo(model.getWorldLocation()) > 51) {
-        Microbot.log("Object id " + id + " too far, walking...");
+        CupidBot.log("Object id " + id + " too far, walking...");
         Rs2Walker.walkTo(model.getWorldLocation());
         return false;
     }
@@ -127,7 +127,7 @@ Watch out for predicates that flip in the *wrong direction* on null. A `noneMatc
 
 ## 5. Static fields leak across plugin restarts
 
-A common Microbot plugin pattern:
+A common CupidBot plugin pattern:
 
 ```java
 public class FooPlugin extends Plugin {
@@ -158,11 +158,11 @@ public boolean run(FooConfig config) {
 
 This is cheap insurance and makes the plugin behave the same on the first start as on the tenth restart.
 
-## 6. Don't use `Microbot.showMessage` from script threads
+## 6. Don't use `CupidBot.showMessage` from script threads
 
-`Microbot.showMessage` opens a Swing modal via `SwingUtilities.invokeAndWait`. If your script's executor is ticking every 100 ms, the next tick will interrupt the AWT-blocking thread and you'll get a flood of `InterruptedException` traces with no actual message ever shown to the user.
+`CupidBot.showMessage` opens a Swing modal via `SwingUtilities.invokeAndWait`. If your script's executor is ticking every 100 ms, the next tick will interrupt the AWT-blocking thread and you'll get a flood of `InterruptedException` traces with no actual message ever shown to the user.
 
-For debug/log indicators, use `Microbot.log` instead — it's just slf4j, never blocks the AWT thread, and shows up in the same place users already look.
+For debug/log indicators, use `CupidBot.log` instead — it's just slf4j, never blocks the AWT thread, and shows up in the same place users already look.
 
 Reserve `showMessage` for hard-stop conditions where the script is about to `shutdown()` and the user genuinely needs to see the message (and even then, only call it once).
 
@@ -194,7 +194,7 @@ For tithe farm specifically, the lane definitions in `TitheFarmingScript.init(..
 
 When a Hub plugin "doesn't do anything":
 
-1. **Is the script even running?** Add a `Microbot.log("X script started")` at the top of `run()` and watch the log on the next plugin start.
+1. **Is the script even running?** Add a `CupidBot.log("X script started")` at the top of `run()` and watch the log on the next plugin start.
 2. **What state is it in?** Most plugins have an overlay showing the current state — read it. If not, log the state on each tick (or on transition).
 3. **Is the cache empty, or just the wrong thing?** `curl 'http://localhost:8081/objects?maxDistance=20&limit=200'` and look at what's actually there.
 4. **Is the player where you think?** `curl 'http://localhost:8081/state'` — and if you're inside an instance, expect logical vs instance coordinates to differ.

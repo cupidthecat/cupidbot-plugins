@@ -44,8 +44,8 @@ ext {
                     include "${project.ext.getPluginsIncludePath()}/${plugin.dir.name}/**"
                     exclude "**/docs/**"
                 }
-                compileClasspath += configurations.microbotRuntime
-                runtimeClasspath += configurations.microbotRuntime
+                compileClasspath += configurations.cupidbotRuntime
+                runtimeClasspath += configurations.cupidbotRuntime
             }
         }
     }
@@ -208,17 +208,7 @@ ext {
                 def jarFile = new File(jarOutputDir, "${plugin.name}-${descriptorInfo.version}.jar")
                 parsed.sha256 = computeSHA256(jarFile)
 
-                // Add GitHub Releases URL using centralized config
-                def releaseBase = project.ext.getGithubPluginsBaseUrl()
-                if (releaseBase.endsWith('/')) {
-                    releaseBase = releaseBase.substring(0, releaseBase.length() - 1)
-                }
-                def releaseTag = project.ext.getGithubPluginsReleaseTag()
-                if (releaseTag.endsWith('/')) {
-                    releaseTag = releaseTag.substring(0, releaseTag.length() - 1)
-                }
-                def pluginId = plugin.name.toLowerCase()
-                parsed.url = "${releaseBase}/${releaseTag}/${pluginId}-${descriptorInfo.version}.jar"
+                parsed.url = "${plugin.name}.jar"
 
                 plugins << parsed
                 logger.info("✅ Plugin ${plugin.name} processed successfully")
@@ -277,7 +267,7 @@ ext {
                 attributes(
                         'Implementation-Title': plugin.name,
                         'Implementation-Version': version,
-                        'Built-By': 'microbot-build',
+                        'Built-By': 'cupidbot-build',
                         'Created-By': 'Gradle Shadow Plugin'
                 )
 
@@ -305,7 +295,7 @@ ext {
         def pluginName = plugin.name
         def pluginDirName = plugin.dir.name
 
-        def docsDir = new File("${project.ext.getPluginsResourcePath()}/${pluginDirName}/docs")
+        def docsDir = project.file("${project.ext.getPluginsResourcePath()}/${pluginDirName}/docs")
         def assetsSourceDir = new File(docsDir, "assets")
 
         if (!docsDir.exists() || !docsDir.isDirectory()) {

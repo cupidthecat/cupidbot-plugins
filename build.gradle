@@ -13,18 +13,18 @@ import groovy.json.JsonOutput
 apply from: 'gradle/project-config.gradle'
 apply from: 'gradle/plugin-utils.gradle'
 
-def microbotClientVersion = project.ext.getMicrobotClientVersion()
-def microbotClientPath = project.findProperty("microbotClientPath")
+def cupidbotClientVersion = project.ext.getCupidBotClientVersion()
+def cupidbotClientPath = project.findProperty("cupidbotClientPath") ?: System.getenv("CUPIDBOT_CLIENT_JAR")
 
-if (!microbotClientPath && project.hasProperty("microbotClientDir")) {
-    def clientDir = file(project.findProperty("microbotClientDir"))
+if (!cupidbotClientPath && project.hasProperty("cupidbotClientDir")) {
+    def clientDir = file(project.findProperty("cupidbotClientDir"))
     if (clientDir.isDirectory()) {
-        def match = clientDir.listFiles()?.findAll { it.name ==~ /microbot-.*\.jar/ && !it.name.contains('sources') && !it.name.contains('shaded') }
+        def match = clientDir.listFiles()?.findAll { it.name ==~ /cupidbot-.*\.jar/ && !it.name.contains('sources') && !it.name.contains('shaded') }
                 ?.sort { -it.lastModified() }
                 ?.first()
         if (match) {
-            microbotClientPath = match.absolutePath
-            logger.lifecycle("🤖 Resolved local microbot client JAR: ${microbotClientPath}")
+            cupidbotClientPath = match.absolutePath
+            logger.lifecycle("🤖 Resolved local cupidbot client JAR: ${cupidbotClientPath}")
         }
     }
 }
@@ -33,7 +33,6 @@ if (!microbotClientPath && project.hasProperty("microbotClientDir")) {
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(project.ext.TARGET_JDK_VERSION)
-        vendor = JvmVendorSpec."${project.ext.JDK_VENDOR}"
     }
 }
 
@@ -66,24 +65,24 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 configurations {
-    microbotRuntime {
+    cupidbotRuntime {
         canBeConsumed = false
         canBeResolved = true
     }
 
     pluginShadowClasspath {
         extendsFrom runtimeClasspath
-        exclude group: 'net.runelite', module: 'microbot'
+        exclude group: 'net.runelite', module: 'cupidbot'
     }
 
     // Disable source downloads for all configurations and rewrite legacy coordinates
     configureEach {
         resolutionStrategy {
             dependencySubstitution {
-                substitute module("com.microbot:client") using module("com.microbot:microbot:${microbotClientVersion}")
+                substitute module("com.cupidbot:client") using module("com.cupidbot:cupidbot:${cupidbotClientVersion}")
             }
             eachDependency { details ->
-                if (details.target.group == 'com.microbot' && details.target.name == 'microbot') {
+                if (details.target.group == 'com.cupidbot' && details.target.name == 'cupidbot') {
                     details.artifactSelection {
                         selectArtifact(DependencyArtifact.DEFAULT_TYPE, null, null)
                     }
@@ -94,32 +93,21 @@ configurations {
 }
 
 repositories {
-    ivy {
-        name = "microbot-client-github-releases"
-        url = uri(project.ext.getGithubClientBaseUrl())
-        patternLayout {
-            artifact "[revision]/[module]-[revision].[ext]"
-            artifact "[revision]/microbot-[revision].[ext]"
-        }
-        metadataSources { artifact() }
-    }
     mavenCentral()
 }
 
 dependencies {
-    if (microbotClientPath) {
-        def clientFile = file(microbotClientPath)
-        if (!clientFile.exists()) {
-            throw new GradleException("microbotClientPath does not exist: ${clientFile}")
-        }
-        compileOnly files(clientFile)
-        microbotRuntime files(clientFile)
-        testImplementation files(clientFile)
-    } else {
-        compileOnly "com.microbot:microbot:${microbotClientVersion}@jar"
-        microbotRuntime "com.microbot:microbot:${microbotClientVersion}@jar"
-        testImplementation "com.microbot:microbot:${microbotClientVersion}@jar"
+    if (!cupidbotClientPath) {
+        throw new GradleException("CupidBot-hub requires a local client jar. Set -PcupidbotClientPath=/absolute/path/to/cupidbot-<version>.jar or CUPIDBOT_CLIENT_JAR.")
     }
+
+    def clientFile = file(cupidbotClientPath)
+    if (!clientFile.exists()) {
+        throw new GradleException("cupidbotClientPath does not exist: ${clientFile}")
+    }
+    compileOnly files(clientFile)
+    cupidbotRuntime files(clientFile)
+    testImplementation files(clientFile)
 }
 
 application {
@@ -129,10 +117,10 @@ application {
 
 tasks.register('runDebug', JavaExec) {
     group = 'application'
-    description = 'Launch the Microbot client via the test entry point (Microbot.java) with pluginsToDebug populated.'
+    description = 'Launch the CupidBot client via the test entry point (CupidBot.java) with pluginsToDebug populated.'
     dependsOn 'testClasses'
     classpath = sourceSets.test.runtimeClasspath
-    mainClass = 'net.runelite.client.Microbot'
+    mainClass = 'net.runelite.client.CupidBot'
 }
 
 // Plugin Logic
@@ -147,17 +135,17 @@ String pluginVersionFromPluginJson(File pluginDir) {
 
 // Discover and filter plugins
 afterEvaluate {
-    def microbotConfig = configurations.microbotRuntime.resolvedConfiguration
-    def microbotDependency = microbotConfig.firstLevelModuleDependencies
-            .find { it.moduleGroup == 'com.microbot' && it.moduleName == 'microbot' }
+    def cupidbotConfig = configurations.cupidbotRuntime.resolvedConfiguration
+    def cupidbotDependency = cupidbotConfig.firstLevelModuleDependencies
+            .find { it.moduleGroup == 'com.cupidbot' && it.moduleName == 'cupidbot' }
 
-    if (microbotDependency) {
-        logger.lifecycle("🤖 Microbot Client Version: ${microbotDependency.moduleVersion}")
+    if (cupidbotDependency) {
+        logger.lifecycle("🤖 CupidBot Client Version: ${cupidbotDependency.moduleVersion}")
     } else {
-        if (microbotClientPath) {
-            logger.lifecycle("🤖 Microbot Client (local path): ${microbotClientPath}")
+        if (cupidbotClientPath) {
+            logger.lifecycle("🤖 CupidBot Client (local path): ${cupidbotClientPath}")
         } else {
-            logger.warn("⚠️  Could not determine microbot client version")
+            logger.warn("⚠️  Could not determine cupidbot client version")
         }
     }
 
@@ -223,6 +211,10 @@ afterEvaluate {
         }
     }
 
+    tasks.named("generatePluginsJson") {
+        dependsOn(pluginPublications.collect { it.jarTask })
+    }
+
     tasks.named('compileTestJava').configure {
         dependsOn allPluginCompileTasks
     }
@@ -234,7 +226,7 @@ afterEvaluate {
 
 tasks.register("copyPluginDocs") {
     group = "documentation"
-    description = "Copies plugin README.md files and resources to the public directory for GitHub Pages"
+    description = "Copies plugin README.md files and resources to the local public directory"
 
     doLast {
         def publicDir = file(project.ext.getDocsOutputPath())

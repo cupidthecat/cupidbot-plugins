@@ -1,10 +1,10 @@
 # Agent Server (Reference)
 
-This is a summary reference for Hub developers. The canonical documentation lives in the Microbot client repo at `docs/AGENT_SERVER.md`.
+This is a summary reference for Hub developers. The canonical documentation lives in the CupidBot client repo at `docs/AGENT_SERVER.md`.
 
 ## Overview
 
-The Agent Server is an embedded HTTP server (port 8081, localhost only) in the Microbot client that exposes game state and interactions to external tools. The Hub uses it to control scripts at runtime during automated testing.
+The Agent Server is an embedded HTTP server (port 8081, localhost only) in the CupidBot client that exposes game state and interactions to external tools. The Hub uses it to control scripts at runtime during automated testing.
 
 The server uses daemon threads and a JVM shutdown hook so it shuts down cleanly when the client exits. If the port is already in use from a previous session, the plugin automatically kills the old process and reclaims the port.
 
@@ -15,7 +15,7 @@ The server uses daemon threads and a JVM shutdown hook so it shuts down cleanly 
 | `/state` | GET | Game state, player info |
 | `/skills` | GET | Skill levels and XP |
 | `/login` | GET, POST | Login status, trigger login, error detection |
-| `/scripts` | GET | List all microbot plugins |
+| `/scripts` | GET | List all cupidbot plugins |
 | `/scripts/start` | POST | Start a plugin by className or name |
 | `/scripts/stop` | POST | Stop a running plugin |
 | `/scripts/status` | GET | Plugin execution status and runtime |
@@ -70,13 +70,13 @@ The server uses daemon threads and a JVM shutdown hook so it shuts down cleanly 
 Hub scripts running inside the JVM can submit results directly:
 
 ```java
-import net.runelite.client.plugins.microbot.agentserver.handler.ScriptResultStore;
+import net.runelite.client.plugins.cupidbot.agentserver.handler.ScriptResultStore;
 
 ScriptResultStore.submit("com.hub.MyPlugin", Map.of("passed", true, "kills", 10));
 ```
 
 ## Related Docs
 
-- `docs/MICROBOT_CLI.md` — CLI command reference (this repo)
+- `docs/CUPIDBOT_CLI.md` — CLI command reference (this repo)
 - `docs/SCRIPT_LIFECYCLE_API.md` — Script lifecycle HTTP API details (this repo)
-- `docs/AGENT_SERVER.md` in Microbot client repo — Full HTTP API reference with examples
+- `docs/AGENT_SERVER.md` in CupidBot client repo — Full HTTP API reference with examples

@@ -1,202 +1,126 @@
-___
+# CupidBot Hub
 
-# Microbot Hub
+CupidBot Hub contains the local plugin source and build system for CupidBot. It imports the legacy hub plugins into the `net.runelite.client.plugins.cupidbot` namespace, builds each plugin as a local jar, and writes a local `plugins.json` manifest for the CupidBot client.
 
-Welcome to the Microbot Hub.
+## Network Boundary
 
-The hub is the dedicated place for community created plugins and scripts. It exists to keep the main Microbot client focused on core features while giving contributors a simple way to build, test, and share new ideas. This separation keeps the client lean, fast, and stable. The hub can evolve quickly without risking the reliability of the core application.
+The hub does not publish runtime download URLs. `plugins.json` uses local jar names such as `PestControlPlugin.jar`, and the CupidBot client reads those jars from `~/.runelite/cupidbot-plugins`.
 
-## What you will find here
+Local plugins may use networking for their own features. Examples include Discord webhook delivery, OpenAI chatbot calls, third-party shooting-star providers, and third-party Tears of Guthix world lookup. The local-only boundary applies to the CupidBot core client and loader, not to plugin feature code.
 
-1. Community plugins that extend Microbot
-2. A light process to build and test plugins
-3. A simple structure that is easy to maintain
+## Plugin Status
+
+CupidBot Hub is still a work in progress. The goal is to make the imported local plugins build, install, and run from local jars, but not every plugin is expected to work perfectly yet. Some plugins may stop themselves when requirements are missing, depend on account/location setup, or still need CupidBot compatibility fixes.
+
+If you find a broken plugin, open an issue with the plugin name, the action you tried, your config/setup, steps to reproduce, and any relevant lines from `/tmp/cupidbot.log`, `build/reports/cupidbot-plugin-audit.json`, or the launcher log.
 
 ## Requirements
 
-1. Java Development Kit that matches the Microbot client version you use
-2. Gradle installed or the Gradle wrapper from the repository
-3. Git for version control
+- Java 11 for hub plugin compilation
+- A local CupidBot client jar built from `../cupidbot`
 
-By default the build calls `https://microbot.cloud/api/version/client` to fetch the latest client version, falling back to `2.0.61` if the lookup fails. Override with `-PmicrobotClientVersion=<version>` or `-PmicrobotClientVersion=latest`. If you need to work offline, point to a downloaded client JAR with `-PmicrobotClientPath=/absolute/path/to/microbot-<version>.jar`.
+## Build All Plugins
 
-Plugin download URLs in `plugins.json` now point at the stable GitHub release tag `latest-release` (e.g., `.../releases/download/latest-release/<plugin>-<version>.jar`). Override with `-PpluginsReleaseTag=<tag>` if you need a different tag.
-
-## Repository layout
-
-Each plugin lives in its own Java package. A typical plugin package can contain the following files and folders:
-
-1. `PestControlPlugin.java` - the primary class for your plugin, extending `Plugin`
-2. `PestControlScript.java` - the script class that contains the main logic, extending `Script`
-3. Other supporting classes as needed for your plugin
-
-Along side of the plugin's package, comes with a resources folder that contains the following:
-1. `docs/README.md` for a short description, setup notes, and known limitations
-2. `docs/assets` folder for screenshots or icons that you want to display in the hub
-3. `dependencies.txt` for extra Maven coordinates that your plugin needs
-4. Any additional resources such as json files, images, or other assets that your plugin needs
-
-Only the files you really use are required. If your plugin has no extra libraries you can omit `dependencies.txt`. If you have no assets/images you can omit the folder.
-
-## Declaring plugin dependencies
-
-If your plugin needs extra libraries, add them to `dependencies.txt`, one line per coordinate in standard Maven format. Example:
-
-```
-com.google.guava:guava:33.2.0-jre
-org.apache.commons:commons-lang3:3.14.0
+```bash
+JAVA_HOME=/usr/lib/jvm/java-11-openjdk ./gradlew clean build generatePluginsJson copyPluginDocs \
+  -PcupidbotClientPath=/home/frank/micro-client-custom/cupidbot/runelite-client/build/libs/cupidbot-2.6.10.jar
 ```
 
-The build reads this file and adds the coordinates at compile time and packaging time.
+Outputs:
 
-## Plugin Descriptor
+- `build/libs/<InternalName>-<version>.jar`
+- `public/docs/plugins.json`
+- copied docs under `public/docs/plugins/` where plugin docs exist
 
-The plugin descriptor is the most important portion of your plugin class. This annotation tells the Microbot client the general metadata about your plugin, such as its name, description, and version.
+## Install Into CupidBot
+
+```bash
+scripts/install-cupidbot-local-plugins.sh
+```
+
+The helper installs:
+
+- `~/.runelite/cupidbot-plugins/plugins.json`
+- `~/.runelite/cupidbot-plugins/<InternalName>.jar`
+- optional plugin docs copied from `public/docs/plugins`
+
+## Test Local Plugins
+
+Run the plugin harness for static lifecycle-risk checks:
+
+```bash
+scripts/test-cupidbot-plugins.sh static --allow-findings
+```
+
+When CupidBot is running with the Agent Server enabled, smoke-test plugin start/stop behavior and parse the client log:
+
+```bash
+scripts/test-cupidbot-plugins.sh lifecycle \
+  --plugin AutoCookingPlugin \
+  --run-seconds 2 \
+  --log-file /tmp/cupidbot.log \
+  --allow-findings
+```
+
+See [docs/PLUGIN_TEST_HARNESS.md](docs/PLUGIN_TEST_HARNESS.md) for full usage, reports, exit codes, and limitations.
+
+To audit every enabled plugin, use the guarded all-plugin mode:
+
+```bash
+scripts/test-cupidbot-plugins.sh audit-all \
+  --live-account-ok \
+  --run-seconds 2 \
+  --log-file /tmp/cupidbot.log \
+  --report build/reports/cupidbot-plugin-audit.json \
+  --allow-findings
+```
+
+## Build One Plugin
+
+```bash
+JAVA_HOME=/usr/lib/jvm/java-11-openjdk ./gradlew build generatePluginsJson \
+  -PpluginList=PestControlPlugin \
+  -PcupidbotClientPath=/home/frank/micro-client-custom/cupidbot/runelite-client/build/libs/cupidbot-2.6.10.jar
+```
+
+## Plugin Layout
+
+Source:
+
+```text
+src/main/java/net/runelite/client/plugins/cupidbot/<pluginname>/
+```
+
+Resources:
+
+```text
+src/main/resources/net/runelite/client/plugins/cupidbot/<pluginname>/
+```
+
+Common files:
+
+- `<PluginName>Plugin.java`
+- `<PluginName>Script.java`
+- `<PluginName>Config.java`
+- `<PluginName>Overlay.java`
+- `dependencies.txt` for extra Maven dependencies
+- `docs/README.md` and `docs/assets/` for local hub documentation
+
+## Descriptor Rules
+
+Every plugin needs a `@PluginDescriptor` with:
+
+- `name`
+- `version`
+- `minClientVersion`
+- `enabledByDefault`
+- `isExternal`
+
+Use relative resource paths for local icons/cards:
 
 ```java
-@PluginDescriptor(
-    name = PluginConstants.DEFAULT_PREFIX + "YourPluginName", // Field to define the plugin name (required)
-    description = "Brief description of what your plugin does", // A brief description of the plugin (optional, default is '')
-    tags = {"tag1", "tag2", "microbot"}, // Tags to categorize the plugin (optional, default is '')
-    authors = { "Your Name" }, // Author(s) of the plugin (optional, default is "Unknown Author")
-    version = YourPlugin.version, // Version of the plugin (required)
-    minClientVersion = "1.9.8", // Minimum client version required to run the plugin (required)
-    iconUrl = "https://example.com/icon.png", // URL to plugin icon shown in client (optional)
-    cardUrl = "https://example.com/card.png", // URL to plugin card image for website (optional)
-    enabledByDefault = PluginConstants.DEFAULT_ENABLED, // Whether the plugin is enabled by default
-    isExternal = PluginConstants.IS_EXTERNAL // Whether the plugin is external
-)
-@Slf4j
-public class YourPlugin extends Plugin {
-    static final String version = "1.0.0";
-    // ... plugin implementation
-}
+iconUrl = "PestControlPlugin/assets/icon.png",
+cardUrl = "PestControlPlugin/assets/card.png"
 ```
 
-### Plugin Descriptor Fields
-
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `name` | String | Yes | The display name of your plugin. Use `PluginConstants.DEFAULT_PREFIX` if you do not want to create one. |
-| `description` | String | No | Brief description shown in the plugin panel |
-| `tags` | String[] | No | Tags for categorizing and searching plugins |
-| `author` | String | No | Plugin author name (defaults to "Unknown Author") |
-| `version` | String | Yes | Plugin version, typically referenced from a static field |
-| `minClientVersion` | String | Yes | Minimum Microbot client version required |
-| `iconUrl` | String | No | URL to plugin icon image shown next to the plugin in the Microbot client hub |
-| `cardUrl` | String | No | URL to plugin card image used for the plugin card on the website |
-| `enabledByDefault` | boolean | No | Whether plugin is enabled by default on first install (use `PluginConstants.DEFAULT_ENABLED`)|
-| `isExternal` | boolean | No | Marks plugin as external (use `PluginConstants.IS_EXTERNAL`) |
-
-### Best Practices
-
-- **Naming**: Use or create tags inside of the `PluginConstants` to keep tags consistent across plugins
-- **Versioning**: Follow semantic versioning (e.g., "1.0.0", "1.2.3") and store in a static field for easy reference
-- **Description**: Keep descriptions concise but informative - they appear in the plugin panel
-- **Tags**: Include relevant tags like the game activity, skill, or functionality your plugin provides
-- **Version Management**: Always increment the version when making changes, even for small fixes
-
-# Building the project
-
-## 1. Open the Gradle UI
-
-![img.png](img.png)
-
-## 2. Refresh the gradle projects
-
-![img_1.png](img_1.png)
-
-## 3. Run the gradle build command
-
-
-![img_4.png](img_4.png)
-
-## 4. Run Microbot in RuneLiteDebug To Test Your Plugin
-
-
-![img_3.png](img_3.png)
-
-
-
-The build produces plugin jars in the usual Gradle output folders. If the project applies a shading step, the final jars will be placed in the shadow or libs folder depending on the build script.
-
-Release downloads expect plugin assets at: `https://github.com/chsami/Microbot-Hub/releases/download/<version>/<pluginname>-<version>.jar`.
-
-## Running a plugin in RuneLiteDebug for test purpose
-
-Use this minimal driver to start a focused debug session. Replace `PestControlPlugin` with your plugin class if needed.
-
-```java
-package net.runelite.client;
-
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-import net.runelite.client.plugins.microbot.pestcontrol.PestControlPlugin;
-
-public class Microbot
-{
-
-	private static final Class<?>[] debugPlugins = {
-		PestControlPlugin.class
-	};
-
-	public static void main(String[] args) throws Exception
-	{
-		List<Class<?>> _debugPlugins = Arrays.stream(debugPlugins).collect(Collectors.toList());
-		RuneLiteDebug.pluginsToDebug.addAll(_debugPlugins);
-		RuneLiteDebug.main(args);
-	}
-}
-```
-
-Tips for a smooth session
-
-1. Make sure the Java version you use here matches the version used to build the client (Java 11)
-2. Confirm that your plugin class is on the classpath of the debug runner
-3. If you see a class version error, rebuild the plugin with the same Java release as the client
-
-## Refresh Plugin Dependencies To Use The Latest Version of The Microbot Client
-
-![img_5.png](img_5.png)
-
-## Adding plugin docs and images
-
-1. Create `README.md` in the plugin's docs folder under resources with a short description, setup notes, and known limitations
-2. Place screenshots in an `assets` folder within the docs folder, e.g., `docs/assets/overview.png`
-3. Use relative links in `README.md` to display screenshots in the hub or on the site that reads these files
-
-Example snippet in `README.md`:
-
-```
-# Pest Control
-Automates the Pest Control minigame. Supports portals and spinners, smart prayer swaps, and activity checks.
-
-![Overview](assets/overview.png)
-```
-
-## Contributing
-
-1. Create a branch with a clear name
-2. Keep changes focused on a single plugin or a single feature
-3. Run the build and make sure it passes
-4. Open a pull request with a short summary and testing steps
-
-## Troubleshooting
-
-**Class was compiled by a newer or older release**
-Rebuild the plugin with the same Java release used by the client. Example, if the client uses release 17, set your Gradle Java toolchain to 17 and rebuild.
-
-**Client does not see the plugin**
-Confirm the jar is in the plugins folder the client reads. If you use side loading, confirm the folder path in your launcher settings. Make sure the plugin class name matches the expected pattern.
-
-**Missing dependency at runtime**
-Place the required coordinate in `dependencies.txt` and rebuild. If the plugin is shaded, ensure the build includes the library inside the final jar.
-
-## Design goals
-
-1. Keep the main client small and focused
-2. Allow rapid iteration in the hub without risk to stability
-3. Make plugin setup and testing as simple as possible
-
-___
+Do not add remote jar download URLs for CupidBot local plugins. Plugin feature networking is allowed when it lives in the plugin source and is visible to users through plugin configuration or docs.

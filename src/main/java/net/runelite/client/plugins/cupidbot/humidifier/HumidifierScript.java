@@ -1,0 +1,102 @@
+package net.runelite.client.plugins.cupidbot.humidifier;
+
+import net.runelite.api.gameval.ItemID;
+import net.runelite.client.plugins.cupidbot.CupidBot;
+import net.runelite.client.plugins.cupidbot.Script;
+import net.runelite.client.plugins.cupidbot.util.antiban.Rs2Antiban;
+import net.runelite.client.plugins.cupidbot.util.antiban.Rs2AntibanSettings;
+import net.runelite.client.plugins.cupidbot.util.antiban.enums.Activity;
+import net.runelite.client.plugins.cupidbot.util.bank.Rs2Bank;
+import net.runelite.client.plugins.cupidbot.util.inventory.Rs2Inventory;
+import net.runelite.client.plugins.cupidbot.util.magic.Rs2Magic;
+import net.runelite.client.plugins.skillcalculator.skills.MagicAction;
+import net.runelite.client.util.QuantityFormatter;
+
+import java.util.concurrent.TimeUnit;
+
+public class HumidifierScript extends Script {
+
+    public static String itemsProcessedMessage = "";
+    public static String profitMessage = "Calculating...";
+    private static long itemsProcessed = 0;
+    private int profit = 0;
+
+    private long timeBegan;
+
+    public boolean run(HumidifierConfig config) {
+        Rs2Antiban.antibanSetupTemplates.applyCombatSetup();
+        Rs2Antiban.setActivity(Activity.HUMIDIFYING_CLAY);
+
+        timeBegan = System.currentTimeMillis();
+        int unprocessedItemPrice = CupidBot.getItemManager().search(config.ITEM().getName()).get(0).getPrice();
+        int processedItemPrice = CupidBot.getItemManager().search(config.ITEM().getFinished()).get(0).getPrice();
+        profit = processedItemPrice - unprocessedItemPrice;
+        itemsProcessedMessage = config.ITEM().getFinished() + " processed: " + itemsProcessed;
+        mainScheduledFuture = scheduledExecutorService.scheduleWithFixedDelay(() -> {
+            try {
+				if (!super.run()) return;
+				if (!CupidBot.isLoggedIn()) return;
+				if (Rs2AntibanSettings.actionCooldownActive) return;
+                boolean hasAstralRunesInInventory = Rs2Inventory.hasItem(ItemID.ASTRALRUNE);
+                if (Rs2Inventory.hasItem(config.ITEM().getName(), true)
+                        && hasAstralRunesInInventory) {
+                    if (!Rs2Bank.isOpen())
+                        Rs2Magic.cast(MagicAction.HUMIDIFY);
+                    sleepUntilOnClientThread(() -> Rs2Inventory.hasItem(config.ITEM().getFinished()));
+                    Rs2Antiban.actionCooldown();
+                    Rs2Antiban.takeMicroBreakByChance();
+                } else {
+                    bank(config, hasAstralRunesInInventory);
+                    calculateItemsProcessedPerHour(config);
+                }
+            } catch (Exception ex) {
+                CupidBot.logStackTrace(this.getClass().getSimpleName(), ex);
+            }
+        }, 0, 500, TimeUnit.MILLISECONDS);
+        return true;
+    }
+
+    private void calculateItemsProcessedPerHour(HumidifierConfig config) {
+        int itemsProcessedPerHour = (int)( itemsProcessed / ((System.currentTimeMillis() - timeBegan) / 3600000.0D));
+        itemsProcessedMessage = config.ITEM().getFinished() + " processed (hr): " + QuantityFormatter.quantityToRSDecimalStack((int) itemsProcessed) + " (" + QuantityFormatter.quantityToRSDecimalStack(itemsProcessedPerHour) + ")";
+        profitMessage = "profit (hr): " + QuantityFormatter.quantityToRSDecimalStack((int) (profit * itemsProcessed)) + " (" + QuantityFormatter.quantityToRSDecimalStack(profit * itemsProcessedPerHour) + ")";
+    }
+
+    private void bank(HumidifierConfig config, boolean hasAstralRunes){
+        if(Rs2Bank.isOpen()){
+            Rs2Bank.depositAll(config.ITEM().getFinished());
+            itemsProcessed += Rs2Inventory.count(config.ITEM().getName());
+            sleepUntil(() -> !Rs2Inventory.hasItem(config.ITEM().getFinished()));
+            if (!hasAstralRunes && !Rs2Bank.hasItem(ItemID.ASTRALRUNE)) {
+                CupidBot.showMessage("You have no astral runes left");
+                shutdown();
+                return;
+            }
+            if(!Rs2Bank.hasBankItem(config.ITEM().getName(), true)) {
+                CupidBot.showMessage("Ran out of Materials");
+                shutdown();
+                return;
+            }
+
+            if (!hasAstralRunes) {
+                Rs2Bank.withdrawAll(true, "astral rune");
+                sleepUntil(() -> Rs2Inventory.hasItem(ItemID.ASTRALRUNE));
+            }
+
+            Rs2Bank.withdrawAll(true, config.ITEM().getName(), true);
+            sleepUntilOnClientThread(() -> Rs2Inventory.hasItem(config.ITEM().getName()));
+            Rs2Bank.closeBank();
+            //sleepUntilOnClientThread(() -> !Rs2Bank.isOpen());
+
+        } else {
+            Rs2Bank.openBank();
+        }
+    }
+
+    @Override
+    public void shutdown() {
+        Rs2Antiban.resetAntibanSettings();
+        super.shutdown();
+        itemsProcessed = 0;
+    }
+}

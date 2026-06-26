@@ -1,12 +1,12 @@
 # Script Lifecycle API
 
-The Microbot client exposes HTTP endpoints that let the Hub start, stop, and monitor plugins at runtime. This is the mechanism for automated testing: the Hub spawns a client with Hub plugins on the classpath, then uses these endpoints to drive execution and collect results.
+The CupidBot client exposes HTTP endpoints that let the Hub start, stop, and monitor plugins at runtime. This is the mechanism for automated testing: the Hub spawns a client with Hub plugins on the classpath, then uses these endpoints to drive execution and collect results.
 
 ## Architecture
 
 ```
 ┌──────────────────────────────────────────────────┐
-│  Microbot-Hub                                    │
+│  CupidBot-Hub                                    │
 │                                                  │
 │  1. Build client with Hub plugins on classpath   │
 │  2. Spawn client process                         │
@@ -18,7 +18,7 @@ The Microbot client exposes HTTP endpoints that let the Hub start, stop, and mon
 └──────────────────────┬───────────────────────────┘
                        │ HTTP (localhost:8081)
 ┌──────────────────────▼───────────────────────────┐
-│  Microbot Client (with Agent Server enabled)     │
+│  CupidBot Client (with Agent Server enabled)     │
 │                                                  │
 │  Server uses daemon threads + shutdown hook —     │
 │  shuts down cleanly when client exits.           │
@@ -35,7 +35,7 @@ The Microbot client exposes HTTP endpoints that let the Hub start, stop, and mon
 
 ## Prerequisites
 
-- Microbot client built with the Agent Server plugin
+- CupidBot client built with the Agent Server plugin
 - Agent Server enabled in the client (default port 8081)
 - Hub plugins on the client classpath
 
@@ -131,15 +131,15 @@ curl -X POST -d '{"className":"com.hub.MyPlugin"}' http://127.0.0.1:8081/scripts
 Or use the CLI:
 
 ```bash
-./microbot-cli login now --world 360
-./microbot-cli scripts start --class "com.hub.MyPlugin"
+./cupidbot-cli login now --world 360
+./cupidbot-cli scripts start --class "com.hub.MyPlugin"
 ```
 
 ## Script Endpoints
 
 ### GET /scripts
 
-Lists all microbot plugins with active/enabled status.
+Lists all cupidbot plugins with active/enabled status.
 
 ```bash
 curl http://127.0.0.1:8081/scripts
@@ -151,7 +151,7 @@ Starts a plugin. The `className` must be the fully qualified Java class name.
 
 ```bash
 curl -X POST -H 'Content-Type: application/json' \
-  -d '{"className":"net.runelite.client.plugins.microbot.aiofighter.AIOFighterPlugin"}' \
+  -d '{"className":"net.runelite.client.plugins.cupidbot.aiofighter.AIOFighterPlugin"}' \
   http://127.0.0.1:8081/scripts/start
 ```
 
@@ -161,14 +161,14 @@ You can also use `{"name": "AIO Fighter"}` for partial name matching.
 
 ```bash
 curl -X POST -H 'Content-Type: application/json' \
-  -d '{"className":"net.runelite.client.plugins.microbot.aiofighter.AIOFighterPlugin"}' \
+  -d '{"className":"net.runelite.client.plugins.cupidbot.aiofighter.AIOFighterPlugin"}' \
   http://127.0.0.1:8081/scripts/stop
 ```
 
 ### GET /scripts/status
 
 ```bash
-curl 'http://127.0.0.1:8081/scripts/status?className=net.runelite.client.plugins.microbot.aiofighter.AIOFighterPlugin'
+curl 'http://127.0.0.1:8081/scripts/status?className=net.runelite.client.plugins.cupidbot.aiofighter.AIOFighterPlugin'
 ```
 
 Returns `status` (RUNNING/STOPPED/ERROR), `startedAt`, `runtimeMs`, and `error` if applicable.
@@ -194,11 +194,11 @@ curl 'http://127.0.0.1:8081/scripts/results?className=com.hub.MyPlugin'
 Hub scripts running inside the JVM can submit results directly without HTTP:
 
 ```java
-import net.runelite.client.plugins.microbot.agentserver.handler.ScriptResultStore;
+import net.runelite.client.plugins.cupidbot.agentserver.handler.ScriptResultStore;
 import java.util.Map;
 
 ScriptResultStore.submit(
-    "net.runelite.client.plugins.microbot.myplugin.MyPlugin",
+    "net.runelite.client.plugins.cupidbot.myplugin.MyPlugin",
     Map.of("passed", true, "kills", 10, "runtime", 45000)
 );
 ```

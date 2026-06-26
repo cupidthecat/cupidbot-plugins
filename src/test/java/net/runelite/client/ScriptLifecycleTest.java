@@ -3,7 +3,7 @@ package net.runelite.client;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import net.runelite.client.plugins.microbot.agentserver.AgentServerPlugin;
+import net.runelite.client.plugins.cupidbot.agentserver.AgentServerPlugin;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -20,14 +20,14 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
- * Self-contained test that launches the Microbot client with the Agent Server
+ * Self-contained test that launches the CupidBot client with the Agent Server
  * plugin, logs in, then exercises the /scripts HTTP endpoints.
  *
  * Usage:
  *   ./gradlew test --tests ScriptLifecycleTest \
- *       -PmicrobotClientPath=/path/to/microbot-2.2.0.jar
+ *       -PcupidbotClientPath=/path/to/cupidbot-2.2.0.jar
  *
- * Or run main() from your IDE with microbot 2.2.0 on the classpath.
+ * Or run main() from your IDE with cupidbot 2.2.0 on the classpath.
  */
 public class ScriptLifecycleTest {
 
@@ -56,7 +56,7 @@ public class ScriptLifecycleTest {
         waitForAgentServer();
         login();
 
-        String pluginClass = "net.runelite.client.plugins.microbot.breakhandler.BreakHandlerPlugin";
+        String pluginClass = "net.runelite.client.plugins.cupidbot.breakhandler.BreakHandlerPlugin";
 
         System.out.println("=== 1. List available scripts ===");
         Map<String, Object> list = get("/scripts");
@@ -120,7 +120,7 @@ public class ScriptLifecycleTest {
                 System.err.println("Client failed to start: " + e.getMessage());
                 e.printStackTrace();
             }
-        }, "microbot-client");
+        }, "cupidbot-client");
         clientThread.setDaemon(true);
         clientThread.start();
     }

@@ -41,6 +41,10 @@ bin/
 ### Mac OS ###
 .DS_Store
 
+### Python test/cache artifacts ###
+__pycache__/
+*.py[cod]
+
 .gradle
 build
 .idea/

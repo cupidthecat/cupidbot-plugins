@@ -1,0 +1,81 @@
+package net.runelite.client.plugins.cupidbot.aiofighter.safety;
+
+import lombok.extern.slf4j.Slf4j;
+import net.runelite.client.plugins.Plugin;
+import net.runelite.client.plugins.cupidbot.CupidBot;
+import net.runelite.client.plugins.cupidbot.Script;
+import net.runelite.client.plugins.cupidbot.aiofighter.AIOFighterConfig;
+import net.runelite.client.plugins.cupidbot.aiofighter.AIOFighterPlugin;
+import net.runelite.client.plugins.cupidbot.aiofighter.enums.State;
+import net.runelite.client.plugins.cupidbot.util.bank.Rs2Bank;
+import net.runelite.client.plugins.cupidbot.util.equipment.Rs2Equipment;
+import net.runelite.client.plugins.cupidbot.util.inventory.Rs2Inventory;
+import net.runelite.client.plugins.cupidbot.util.magic.Rs2Magic;
+import net.runelite.client.plugins.cupidbot.util.player.Rs2Player;
+
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+
+import static net.runelite.client.plugins.cupidbot.CupidBot.log;
+
+@Slf4j
+public class SafetyScript extends Script {
+    public boolean run(AIOFighterConfig config) {
+        mainScheduledFuture = scheduledExecutorService.scheduleWithFixedDelay(() -> {
+            try {
+                if (!CupidBot.isLoggedIn()) return;
+                if (!super.run()) return;
+                if (!config.useSafety()) return;
+                if (isBankingOrWalking()) return;
+                if (config.missingRunes() && config.useMagic() && !Rs2Magic.hasRequiredRunes(config.magicSpell())){
+                    stopAndLog("Missing runes for spell: " + config.magicSpell());
+                }
+                if (config.missingFood() && Rs2Inventory.getInventoryFood().isEmpty() && !config.bank()){
+                    stopAndLog("Missing food in inventory. Turn Missing Food config off if you don't want this.");
+                }
+                if (config.missingArrows() && !Rs2Equipment.isWearing(x -> x.getName().toLowerCase().contains("arrow") || x.getName().toLowerCase().contains("bolt") || x.getName().toLowerCase().contains("dart") || x.getName().toLowerCase().contains("knife"))){
+                    stopAndLog("Missing arrows in inventory/equipment");
+                }
+                String setupName = "";
+                if (config.slayerMode()) {
+                    if (config.currentInventorySetup() != null) {
+                        setupName = config.currentInventorySetup().getName();
+                    }
+                } else {
+                    if (config.inventorySetup() != null) {
+                        setupName = config.inventorySetup().getName();
+                    }
+                }
+                if (config.lowHealth() && Rs2Inventory.getInventoryFood().isEmpty() && (!config.bank() || setupName == null)){
+                    if (Rs2Player.getHealthPercentage() < config.healthSafetyValue()){
+                        stopAndLog("Low health: " + Rs2Player.getHealthPercentage() + "%");
+                    }
+                }
+            } catch(Exception ex) {
+                System.out.println("Safety script error: "+ex.getMessage());
+            }
+        }, 0, 600, TimeUnit.MILLISECONDS);
+        return true;
+    }
+
+    public void stopAndLog(String reason) {
+        log(reason, Level.WARNING);
+        // Avoid competing with BankerScript's walker while it is already controlling movement.
+        if (!isBankingOrWalking() && !Rs2Player.isMoving()) {
+            Rs2Bank.walkToBank();
+        }
+        Rs2Player.logout();
+        Plugin PlayerAssistPlugin = CupidBot.getPlugin(AIOFighterPlugin.class.getName());
+        CupidBot.stopPlugin(PlayerAssistPlugin);
+    }
+
+    private boolean isBankingOrWalking() {
+        State state = AIOFighterPlugin.getState();
+        return state == State.BANKING || state == State.WALKING;
+    }
+
+    @Override
+    public void shutdown() {
+        super.shutdown();
+    }
+}
