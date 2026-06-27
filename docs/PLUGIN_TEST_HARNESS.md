@@ -59,7 +59,7 @@ Example:
 
 ```bash
 scripts/install-cupidbot-local-plugins.sh
-java -jar ~/.cupidbot/cupidbot-2.6.10.jar > /tmp/cupidbot.log 2>&1
+java -jar ~/.cupidbot/cupidbot-2.6.11.jar > /tmp/cupidbot.log 2>&1
 ```
 
 In another shell, test one plugin:

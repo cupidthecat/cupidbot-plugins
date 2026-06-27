@@ -23,7 +23,7 @@ If you find a broken plugin, open an issue with the plugin name, the action you 
 
 ```bash
 JAVA_HOME=/usr/lib/jvm/java-11-openjdk ./gradlew clean build generatePluginsJson copyPluginDocs \
-  -PcupidbotClientPath=/home/frank/micro-client-custom/cupidbot/runelite-client/build/libs/cupidbot-2.6.10.jar
+  -PcupidbotClientPath=/home/frank/micro-client-custom/cupidbot/runelite-client/build/libs/cupidbot-2.6.11.jar
 ```
 
 Outputs:
@@ -80,7 +80,7 @@ scripts/test-cupidbot-plugins.sh audit-all \
 ```bash
 JAVA_HOME=/usr/lib/jvm/java-11-openjdk ./gradlew build generatePluginsJson \
   -PpluginList=PestControlPlugin \
-  -PcupidbotClientPath=/home/frank/micro-client-custom/cupidbot/runelite-client/build/libs/cupidbot-2.6.10.jar
+  -PcupidbotClientPath=/home/frank/micro-client-custom/cupidbot/runelite-client/build/libs/cupidbot-2.6.11.jar
 ```
 
 ## Plugin Layout
