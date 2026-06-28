@@ -920,9 +920,57 @@ public class MKE_WintertodtScript extends Script {
                 System.currentTimeMillis(), state, newState, lock ? "(LOCKED)" : ""));
 
         state = newState;
+        syncAntibanActivityForState(newState);
         resetActions = true;
         lastStateChange = System.currentTimeMillis();
         setLockState(newState, lock);
+    }
+
+    static Activity antibanActivityForState(State wintertodtState) {
+        if (wintertodtState == null) {
+            return Activity.GENERAL_FIREMAKING;
+        }
+
+        switch (wintertodtState) {
+            case CHOP_ROOTS:
+                return Activity.GENERAL_WOODCUTTING;
+            case FLETCH_LOGS:
+                return Activity.GENERAL_FLETCHING;
+            case GET_CONCOCTIONS:
+            case GET_HERBS:
+            case MAKE_POTIONS:
+                return Activity.GENERAL_HERBLORE;
+            case WAITING:
+            case LIGHT_BRAZIER:
+            case BURN_LOGS:
+            case FIX_BRAZIER:
+            case BANKING:
+            case ENTER_ROOM:
+            case WALKING_TO_SAFE_SPOT_FOR_BREAK:
+            case EXITING_FOR_REWARDS:
+            case WALKING_TO_REWARDS_BANK:
+            case BANKING_FOR_REWARDS:
+            case WALKING_TO_REWARD_CART:
+            case LOOTING_REWARD_CART:
+            case RETURNING_FROM_REWARDS:
+            case GLOBAL:
+            default:
+                return Activity.GENERAL_FIREMAKING;
+        }
+    }
+
+    private static void syncAntibanActivityForState(State wintertodtState) {
+        if (!Rs2AntibanSettings.dynamicActivity) {
+            return;
+        }
+
+        Activity activity = antibanActivityForState(wintertodtState);
+        if (Rs2Antiban.getActivity() != activity) {
+            Rs2Antiban.setActivity(activity);
+            if (Rs2AntibanSettings.devDebug) {
+                CupidBot.log("Wintertodt antiban activity changed to: " + activity.getMethod());
+            }
+        }
     }
 
     /**
@@ -1249,10 +1297,16 @@ public class MKE_WintertodtScript extends Script {
         try {
             CupidBot.log("Configuring antiban settings for Wintertodt...");
 
+            boolean userDynamicActivity = Rs2AntibanSettings.dynamicActivity;
+            boolean userDynamicIntensity = Rs2AntibanSettings.dynamicIntensity;
+
             // Reset and apply firemaking setup
             Rs2Antiban.resetAntibanSettings();
             Rs2Antiban.antibanSetupTemplates.applyFiremakingSetup();
             Rs2Antiban.setActivity(Activity.GENERAL_FIREMAKING);
+
+            Rs2AntibanSettings.dynamicActivity = userDynamicActivity || Rs2AntibanSettings.dynamicActivity;
+            Rs2AntibanSettings.dynamicIntensity = userDynamicIntensity || Rs2AntibanSettings.dynamicIntensity;
 
             // Override some settings for Wintertodt-specific behavior
             Rs2AntibanSettings.takeMicroBreaks = false; // Disabled - using custom microbreak system
@@ -1265,7 +1319,11 @@ public class MKE_WintertodtScript extends Script {
             Rs2AntibanSettings.naturalMouse = true;
             Rs2AntibanSettings.simulateMistakes = true;
             Rs2AntibanSettings.simulateFatigue = true;
-            Rs2Antiban.setActivityIntensity(ActivityIntensity.HIGH);
+            if (Rs2AntibanSettings.dynamicActivity) {
+                syncAntibanActivityForState(state);
+            } else if (!Rs2AntibanSettings.dynamicIntensity) {
+                Rs2Antiban.setActivityIntensity(ActivityIntensity.HIGH);
+            }
 
             // Log antiban configuration
             CupidBot.log("=== Antiban Configuration ===");

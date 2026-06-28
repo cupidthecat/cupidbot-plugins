@@ -289,7 +289,14 @@ public class WintertodtLocationManager {
      * Checks if player is already in Wintertodt area.
      */
     private boolean isAtWintertodt() {
-        WorldPoint playerLocation = Rs2Player.getWorldLocation();
+        return isAtWintertodt(Rs2Player.getWorldLocation());
+    }
+
+    static boolean isAtWintertodt(WorldPoint playerLocation) {
+        if (playerLocation == null) {
+            return false;
+        }
+
         return playerLocation.distanceTo(WINTERTODT_BANK) <= WINTERTODT_AREA_RADIUS && playerLocation.getY() <= 3967;
     }
 
@@ -297,7 +304,14 @@ public class WintertodtLocationManager {
      * Checks if player is inside the Wintertodt game room (north of doors).
      */
     public static boolean isInsideGameRoom() {
-        WorldPoint playerLocation = Rs2Player.getWorldLocation();
+        return isInsideGameRoom(Rs2Player.getWorldLocation());
+    }
+
+    static boolean isInsideGameRoom(WorldPoint playerLocation) {
+        if (playerLocation == null) {
+            return false;
+        }
+
         return playerLocation.getY() > GAME_ROOM_Y_THRESHOLD &&
                playerLocation.distanceTo(WINTERTODT_BOSS_ROOM) <= 40;
     }
