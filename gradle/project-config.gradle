@@ -20,7 +20,7 @@ project.ext.DEFAULT_SUPPORT_URL = ''
 
 // Maven publication
 project.ext.MAVEN_GROUP_ID = 'net.runelite.client.plugins.cupidbot'
-project.ext.CUPIDBOT_CLIENT_VERSION = '2.6.11'
+project.ext.CUPIDBOT_CLIENT_VERSION = '2.6.12'
 
 // Helper functions for accessing config
 project.ext.getPluginsSourcePath = { -> project.ext.PLUGINS_SOURCE_PATH }
