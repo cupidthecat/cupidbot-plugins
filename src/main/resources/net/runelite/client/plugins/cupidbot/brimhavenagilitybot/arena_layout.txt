@@ -1,0 +1,43 @@
+# Describes the layout of the Brimhaven Agility arena. Each line is 5 chars:
+# source x, source y, obstacle short code, destination x, destination y.
+# Adapted from rl-plugin-brimhaven-agility, BSD 2-Clause, Copyright (c) 2025-2026 Karl Goffin.
+00l10
+00i01
+01p11
+01h02
+02s12
+02f03
+03o13
+03b04
+04l14
+10m20
+10f11
+11n21
+11r12
+12d22
+12m13
+13n23
+13a14
+14w24
+20h30
+20b21
+21d31
+21w22
+22i32
+22n23
+23b33
+23r24
+24h34
+30l40
+30r31
+31a41
+31m32
+32f42
+32d33
+33a43
+33o34
+34p44
+40i41
+41w42
+42i43
+43s44
