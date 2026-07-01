@@ -10,6 +10,7 @@ public class WintertodtLocationManagerTest
 		isInsideGameRoomDetectsBossRoom();
 		isAtWintertodtReturnsFalseWhenLocationUnknown();
 		isAtWintertodtDetectsCampAreaOutsideGameRoom();
+		isAtWintertodtDoesNotTreatEntranceAsBankReady();
 	}
 
 	private static void isInsideGameRoomReturnsFalseWhenLocationUnknown()
@@ -32,6 +33,11 @@ public class WintertodtLocationManagerTest
 	{
 		assertTrue(WintertodtLocationManager.isAtWintertodt(new WorldPoint(1640, 3944, 0)));
 		assertFalse(WintertodtLocationManager.isAtWintertodt(new WorldPoint(1630, 3982, 0)));
+	}
+
+	private static void isAtWintertodtDoesNotTreatEntranceAsBankReady()
+	{
+		assertFalse(WintertodtLocationManager.isAtWintertodt(new WorldPoint(1630, 3963, 0)));
 	}
 
 	private static void assertTrue(boolean value)

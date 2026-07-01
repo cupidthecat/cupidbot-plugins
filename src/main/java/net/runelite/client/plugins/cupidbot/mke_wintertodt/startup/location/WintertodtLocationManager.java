@@ -40,7 +40,6 @@ public class WintertodtLocationManager {
     private static final WorldPoint WINTERTODT_BOSS_ROOM = new WorldPoint(1630, 3982, 0);
 
     // Distance thresholds
-    private static final int WINTERTODT_AREA_RADIUS = 25;
     private static final int BANK_PROXIMITY_RADIUS = 3;
     private static final int FAR_FROM_BANK_THRESHOLD = 100;
 
@@ -194,8 +193,8 @@ public class WintertodtLocationManager {
             // Step 1: Check if already at Wintertodt
             if (isAtWintertodt()) {
                 currentState = NavigationState.ALREADY_AT_WINTERTODT;
-                statusMessage = "Already at Wintertodt area";
-                CupidBot.log("Player is already at Wintertodt - no navigation needed.");
+                statusMessage = "Already at Wintertodt bank";
+                CupidBot.log("Player is already at Wintertodt bank - no navigation needed.");
                 return true;
             }
 
@@ -297,7 +296,7 @@ public class WintertodtLocationManager {
             return false;
         }
 
-        return playerLocation.distanceTo(WINTERTODT_BANK) <= WINTERTODT_AREA_RADIUS && playerLocation.getY() <= 3967;
+        return playerLocation.distanceTo(WINTERTODT_BANK) <= BANK_PROXIMITY_RADIUS && playerLocation.getY() <= 3967;
     }
 
     /**

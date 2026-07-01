@@ -104,6 +104,7 @@ public class MKE_WintertodtScript extends Script {
 
     // Custom break management system
     private WintertodtBreakManager breakManager;
+    private Rs2AntibanSettings.SettingsSnapshot userAntibanSettings;
 
     // World locations for key areas
     private final WorldPoint BOSS_ROOM = new WorldPoint(1630, 3976, 0);
@@ -150,6 +151,7 @@ public class MKE_WintertodtScript extends Script {
 
     // Flag to prioritize brazier lighting at round start
     private static boolean shouldPriorizeBrazierAtStart = false;
+    private static final long INITIAL_BRAZIER_LIGHTING_GRACE_MS = 2500;
 
     // One-shot: walk to the snowfall-safe fletch tile only on a fresh entry to
     // FLETCH_LOGS (i.e. coming from chopping). Resumed fletches after a brazier
@@ -1296,6 +1298,10 @@ public class MKE_WintertodtScript extends Script {
     private void configureAntibanSettings() {
         try {
             CupidBot.log("Configuring antiban settings for Wintertodt...");
+
+            if (userAntibanSettings == null) {
+                userAntibanSettings = Rs2AntibanSettings.captureSettings();
+            }
 
             boolean userDynamicActivity = Rs2AntibanSettings.dynamicActivity;
             boolean userDynamicIntensity = Rs2AntibanSettings.dynamicIntensity;
@@ -3180,8 +3186,25 @@ public class MKE_WintertodtScript extends Script {
             setLockState(State.BURN_LOGS, false);
             return false;
         }
+
+        prepareForImmediateBurning();
         changeState(State.BURN_LOGS, false);  // Don't lock - allows natural state transitions
         return true;
+    }
+
+    private void prepareForImmediateBurning() {
+        if (state == State.FLETCH_LOGS || state == State.CHOP_ROOTS) {
+            setLockState(state, false);
+        }
+        if (fletchingState.isActive()) {
+            fletchingState.stopFletching(FletchingInterruptType.MANUAL_STOP);
+            lastFletchingAnimationTime = 0;
+        }
+        targetRootsForThisRun = 0;
+        rootsChoppedThisRun = 0;
+        fletchGoal = 0;
+        lastHoveredRoot = null;
+        needFletchTileWalk = false;
     }
 
     /**
@@ -3226,6 +3249,9 @@ public class MKE_WintertodtScript extends Script {
 
         if (gameState.burningBrazier == null && gameState.brazier != null
                 && config.relightBrazier() && gameState.isWintertodtAlive) {
+            if (isInitialBrazierLightingGraceActive()) {
+                return false;
+            }
             if (fletchingState.isActive()) {
                 fletchingState.stopFletching(FletchingInterruptType.BRAZIER_WENT_OUT);
             }
@@ -3409,6 +3435,8 @@ public class MKE_WintertodtScript extends Script {
         // Allow lighting during CHOP_ROOTS only if it's a priority at round start
         if (state == State.CHOP_ROOTS && !shouldPriorizeBrazierAtStart) return false;
 
+        if (isInitialBrazierLightingGraceActive()) return false;
+
         if (gameState.brazier == null || gameState.burningBrazier != null) {
             setLockState(State.LIGHT_BRAZIER, false);
             // Only consume the round-start priority when a brazier is *definitively*
@@ -3425,6 +3453,12 @@ public class MKE_WintertodtScript extends Script {
 
         changeState(State.LIGHT_BRAZIER, true);
         return true;
+    }
+
+    private static boolean isInitialBrazierLightingGraceActive() {
+        return state == State.WAITING
+                && !shouldPriorizeBrazierAtStart
+                && System.currentTimeMillis() - lastStateChange < INITIAL_BRAZIER_LIGHTING_GRACE_MS;
     }
 
     /**
@@ -4215,8 +4249,7 @@ public class MKE_WintertodtScript extends Script {
             CupidBot.log("Unlocked break handler state during shutdown");
         }
 
-        // Reset antiban settings but don't override user preferences
-        Rs2Antiban.resetAntibanSettings(false);
+        restoreUserAntibanSettings();
 
         // Shutdown break manager
         if (breakManager != null) {
@@ -4225,6 +4258,15 @@ public class MKE_WintertodtScript extends Script {
 
         super.shutdown();
         CupidBot.log("Script shutdown completed with full state reset");
+    }
+
+    private void restoreUserAntibanSettings() {
+        boolean loaded = Rs2AntibanSettings.loadFromProfile();
+        if (!loaded && userAntibanSettings != null) {
+            Rs2AntibanSettings.restoreSettings(userAntibanSettings);
+        }
+        userAntibanSettings = null;
+        Rs2Antiban.resetRuntimeState();
     }
 
     /**
