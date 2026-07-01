@@ -13,6 +13,7 @@ import net.runelite.client.plugins.cupidbot.agility.courses.WerewolfCourse;
 import net.runelite.client.plugins.cupidbot.api.tileitem.models.Rs2TileItemModel;
 import net.runelite.client.plugins.cupidbot.util.antiban.Rs2Antiban;
 import net.runelite.client.plugins.cupidbot.util.antiban.Rs2AntibanSettings;
+import net.runelite.client.plugins.cupidbot.util.antiban.enums.Activity;
 import net.runelite.client.plugins.cupidbot.util.camera.Rs2Camera;
 import net.runelite.client.plugins.cupidbot.util.gameobject.Rs2GameObject;
 import net.runelite.client.plugins.cupidbot.util.inventory.Rs2Inventory;
@@ -61,8 +62,7 @@ public class AgilityScript extends Script
 	public boolean run()
 	{
 		CupidBot.enableAutoRunOn = true;
-		Rs2Antiban.resetAntibanSettings();
-		Rs2Antiban.antibanSetupTemplates.applyAgilitySetup();
+		configureAntibanSettings();
 		startPoint = plugin.getCourseHandler().getStartPoint();
 		lastAgilityXp = CupidBot.getClient().getSkillExperience(Skill.AGILITY);
 		mainScheduledFuture = scheduledExecutorService.scheduleWithFixedDelay(() -> {
@@ -245,6 +245,14 @@ public class AgilityScript extends Script
 			}
 		}, 0, 100, TimeUnit.MILLISECONDS);
 		return true;
+	}
+
+	static void configureAntibanSettings()
+	{
+		Rs2AntibanSettings.SettingsSnapshot userSettings = Rs2AntibanSettings.captureSettings();
+		Rs2AntibanSettings.restoreSettings(userSettings);
+		Rs2Antiban.resetRuntimeState();
+		Rs2Antiban.setActivity(Activity.GENERAL_AGILITY);
 	}
 
 	private Optional<String> getAlchItem()
