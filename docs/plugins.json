@@ -1,0 +1,3479 @@
+[
+    {
+        "internalName": "LeaguesToolkitPlugin",
+        "name": "Leagues Toolkit",
+        "description": "Quality-of-life utilities for Leagues (anti-AFK, and more to come)",
+        "tags": [
+            "leagues",
+            "cupidbot",
+            "utility",
+            "afk"
+        ],
+        "version": "1.3.0",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "4b00648337fb9caad03903682a0aae9d14a9a58629b8e4c8dfef162dd8136c0c",
+        "url": "LeaguesToolkitPlugin.jar"
+    },
+    {
+        "internalName": "BlueDragonsPlugin",
+        "name": "Blue Dragons",
+        "description": "Blue dragon farmer for bones",
+        "tags": [
+            "blue",
+            "dragons",
+            "prayer"
+        ],
+        "version": "1.2.0",
+        "minClientVersion": "2.0.14",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "3b5cb29604dda0915b43f9174bb6bde19de855cb74d9e0714a802ef63e349b04",
+        "url": "BlueDragonsPlugin.jar"
+    },
+    {
+        "internalName": "ChaosAltarPlugin",
+        "name": "Chaos Altar",
+        "description": "Automates bone offering at the Chaos Altar",
+        "tags": [
+            "prayer",
+            "bones",
+            "altar"
+        ],
+        "version": "1.1.1",
+        "minClientVersion": "2.1.0",
+        "authors": [
+            "Bee"
+        ],
+        "iconUrl": "ChaosAltarPlugin/assets/icon.jpg",
+        "cardUrl": "ChaosAltarPlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "645136f24ccc3729bde035df75b35f54db65a9d16faf95b2b9e3bc0109f2b818",
+        "url": "ChaosAltarPlugin.jar"
+    },
+    {
+        "internalName": "BankSellerPlugin",
+        "name": "Bank Seller",
+        "description": "Withdraws tradeable bank items and sells them on the Grand Exchange",
+        "tags": [
+            "bank",
+            "ge",
+            "seller"
+        ],
+        "version": "1.0.2",
+        "minClientVersion": "1.9.8",
+        "authors": [
+            "KSP"
+        ],
+        "iconUrl": "BankSellerPlugin/assets/bank.png",
+        "cardUrl": "BankSellerPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "e4f6407d7fca5c9e13abcf9950fc931b053abec1aff6fc5fa8e96466d0277495",
+        "url": "BankSellerPlugin.jar"
+    },
+    {
+        "internalName": "CupidAgilityPlugin",
+        "name": "Agility",
+        "description": "CupidBot agility plugin",
+        "tags": [
+            "agility",
+            "cupidbot"
+        ],
+        "version": "1.2.8",
+        "minClientVersion": "2.1.0",
+        "authors": [
+            "Mocrosoft"
+        ],
+        "iconUrl": "CupidAgilityPlugin/assets/icon.png",
+        "cardUrl": "CupidAgilityPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "a535dfb6edaca9b2a1e2404391028ab6fd0eabf7c78a73223f717e270e0865f2",
+        "url": "CupidAgilityPlugin.jar"
+    },
+    {
+        "internalName": "BarbarianVillageFisherPlugin",
+        "name": "Barb Village Fisher",
+        "description": "Fly and bait fish in Barbarian Village.",
+        "tags": [
+            "fish",
+            "fishing",
+            "fly",
+            "bait",
+            "barb",
+            "barbarian",
+            "village"
+        ],
+        "version": "1.0.1",
+        "minClientVersion": "1.9.6",
+        "authors": [
+            "StickToTheScript"
+        ],
+        "iconUrl": "BarbarianVillageFisherPlugin/assets/icon.png",
+        "cardUrl": "BarbarianVillageFisherPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "eec30b4c9da71ff1968a926e3ed7ac4b70576fac58af41df9ce9ab22fff0073e",
+        "url": "BarbarianVillageFisherPlugin.jar"
+    },
+    {
+        "internalName": "AIOCamdozPlugin",
+        "name": "AIO Camdozaal",
+        "description": "Cardews AIO Camdozaal plugin",
+        "tags": [
+            "aio",
+            "cupidbot",
+            "camdozaal",
+            "cd",
+            "cardew"
+        ],
+        "version": "1.0.0",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "Cardews"
+        ],
+        "iconUrl": "AIOCamdozPlugin/assets/icon.jpg",
+        "cardUrl": "AIOCamdozPlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "62740eb2743bf35d536703791460a6a931d9089367e29949202d7bcc9af2f732",
+        "url": "AIOCamdozPlugin.jar"
+    },
+    {
+        "internalName": "TheMessPlugin",
+        "name": "The Mess",
+        "description": "A plugin to automate cooking in The Mess hall.",
+        "tags": [
+            "cooking",
+            "skilling",
+            "cupidbot"
+        ],
+        "version": "1.1.1",
+        "minClientVersion": "1.9.8",
+        "authors": [
+            "Bolado"
+        ],
+        "iconUrl": "TheMessPlugin/assets/icon.png",
+        "cardUrl": "TheMessPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "72ef351fb2ff3aa2d4f1cefb317add2fd4397ef892fcbdaaa916e524627203ca",
+        "url": "TheMessPlugin.jar"
+    },
+    {
+        "internalName": "TutorialIslandPlugin",
+        "name": "Tutorial Island",
+        "description": "CupidBot Tutorial Island plugin",
+        "tags": [
+            "TutorialIsland",
+            "cupidbot"
+        ],
+        "version": "1.3.16",
+        "minClientVersion": "1.9.9.2",
+        "authors": [
+            "Mocrosoft"
+        ],
+        "iconUrl": "TutorialIslandPlugin/assets/icon.png",
+        "cardUrl": "TutorialIslandPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "003252522dc064a1a5359a834722564fbe6b65a2329e063667487833fa042b06",
+        "url": "TutorialIslandPlugin.jar"
+    },
+    {
+        "internalName": "GrapeFarmerPlugin",
+        "name": "Grape farmer",
+        "description": "Grape farmer",
+        "tags": [
+            "skilling",
+            "farming",
+            "money making"
+        ],
+        "version": "1.0.0",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "3aa856aa3d4d0570d109b18325bda750b498469082d65d82087a97350c29a94b",
+        "url": "GrapeFarmerPlugin.jar"
+    },
+    {
+        "internalName": "MinnowsPlugin",
+        "name": "Auto Minnows",
+        "description": "CupidBot minnows plugin",
+        "tags": [
+            "minnows",
+            "cupidbot"
+        ],
+        "version": "1.0.4",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "See1Duck"
+        ],
+        "iconUrl": "MinnowsPlugin/assets/icon.jpg",
+        "cardUrl": "MinnowsPlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "52c10ed282c8807077426195c81b83740c5c7e9763c13818b5b4d92a406f4c97",
+        "url": "MinnowsPlugin.jar"
+    },
+    {
+        "internalName": "BankOrganizerPlugin",
+        "name": "Bank Organizer",
+        "description": "Organizes real bank tabs from practical item categories.",
+        "tags": [
+            "bank",
+            "organizer",
+            "tabs",
+            "sort"
+        ],
+        "version": "1.0.0",
+        "minClientVersion": "2.0.61",
+        "authors": [
+            "bgatfa"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "86d7bee3e34b81de6df62beb7c96f596fa49302e7dc64654aaf7de064d88bda2",
+        "url": "BankOrganizerPlugin.jar"
+    },
+    {
+        "internalName": "revKillerPlugin",
+        "name": "Revenant Killer",
+        "description": "Kills revenants in the wilderness.",
+        "tags": [
+            "mm",
+            "ranging",
+            "revenant killer"
+        ],
+        "version": "2.0.9",
+        "minClientVersion": "2.1.0",
+        "authors": [
+            "Gage"
+        ],
+        "iconUrl": "revKillerPlugin/assets/icon.png",
+        "cardUrl": "revKillerPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "de962765f5dbb28352d92bd3513714d6fa8658e61f6145a8931f7f8d4c36ed99",
+        "url": "revKillerPlugin.jar"
+    },
+    {
+        "internalName": "BanksShopperPlugin",
+        "name": "Bank's Shopper",
+        "description": "Bank's Auto Shopper",
+        "tags": [
+            "shopper",
+            "bank.js"
+        ],
+        "version": "1.4.2",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "Bankjs"
+        ],
+        "iconUrl": "BanksShopperPlugin/assets/icon.png",
+        "cardUrl": "BanksShopperPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "86ebc58471ab0ce0b32f6b85a09d151c1d7d9a7af694424e7a9f4adb81e2ad1f",
+        "url": "BanksShopperPlugin.jar"
+    },
+    {
+        "internalName": "TearsOfGuthixPlugin",
+        "name": "Tears of Guthix",
+        "description": "Optimally complete the Tears of Guthix D&D",
+        "tags": [
+            "Tears",
+            "of",
+            "guthix",
+            "taf",
+            "xp",
+            "cupidbot"
+        ],
+        "version": "1.0.4",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "f04dfafb007732809ffc5b120f2eee9ba519bfcaddb0733c021b84c59d197aa5",
+        "url": "TearsOfGuthixPlugin.jar"
+    },
+    {
+        "internalName": "ActionReplayPlugin",
+        "name": "AIO AIO</html>",
+        "description": "Record and replay sequences of in-game actions. 80/20 automation for one-off tasks.",
+        "tags": [
+            "cupidbot",
+            "aio",
+            "record",
+            "replay",
+            "macro",
+            "automation"
+        ],
+        "version": "1.1.0",
+        "minClientVersion": "2.1.32",
+        "authors": [
+            "Red Bracket"
+        ],
+        "iconUrl": "ActionReplayPlugin/assets/icon.png",
+        "cardUrl": "ActionReplayPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "c6c5695c6488461d147146129a6e10a98427a59d598359a34cfd9b1f41db31f4",
+        "url": "ActionReplayPlugin.jar"
+    },
+    {
+        "internalName": "FlipperPlugin",
+        "name": "Flipper",
+        "description": "Flipping copilot automation",
+        "tags": [
+            "flip",
+            "ge",
+            "grand",
+            "exchange",
+            "automation"
+        ],
+        "version": "1.2.4",
+        "minClientVersion": "2.1.32",
+        "authors": [
+            "Choken",
+            "afss0"
+        ],
+        "iconUrl": "FlipperPlugin/assets/icon.jpg",
+        "cardUrl": "FlipperPlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "7d9329e76b9dd9235d3660584287e5975c43098702293f4ffdd0e44d1ab28df8",
+        "url": "FlipperPlugin.jar"
+    },
+    {
+        "internalName": "PitfallHunterPlugin",
+        "name": "Pitfall Hunter",
+        "description": "Local Sunlight Antelope pitfall loop. Lure closest NPC, then use closest pit.",
+        "tags": [
+            "hunter",
+            "pitfall",
+            "sunlight antelope",
+            "local",
+            "mvp"
+        ],
+        "version": "0.1.52",
+        "minClientVersion": "2.1.0",
+        "authors": [
+            "CupidBot-Hub"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "8bc44ab00c23d56e8c2e13b26478abce66a42743f27562c6ea8b25768308bf42",
+        "url": "PitfallHunterPlugin.jar"
+    },
+    {
+        "internalName": "AnimatedArmourPlugin",
+        "name": "Animated Armour Killer & ",
+        "description": "Builds, Kills, and loots animated armour and warrior guild tokens.",
+        "tags": [
+            "animated armour",
+            "cupidbot",
+            "warrior guild"
+        ],
+        "version": "1.0.2",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "See1Duck"
+        ],
+        "iconUrl": "AnimatedArmourPlugin/assets/icon.png",
+        "cardUrl": "AnimatedArmourPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "201a4d237151d25525572155db8e9ba5865b2687fe870cfcbb7de470241d72b2",
+        "url": "AnimatedArmourPlugin.jar"
+    },
+    {
+        "internalName": "GabulhasSandMinerPlugin",
+        "name": "Sandstone miner",
+        "description": "",
+        "tags": [
+            "GabulhasSandMiner",
+            "Gabulhas"
+        ],
+        "version": "1.2.2",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "75e1a2b49241d112acef36d783ea2a4514b755239d4e37a7498f458e06168558",
+        "url": "GabulhasSandMinerPlugin.jar"
+    },
+    {
+        "internalName": "ShadesKillerPlugin",
+        "name": "ShadesKiller",
+        "description": "CupidBot ShadesKiller plugin",
+        "tags": [
+            "Shades",
+            "cupidbot",
+            "Moneymaking"
+        ],
+        "version": "1.0.2",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "47cc755789bd15f0efb1e43f51b4a483e9b92635b39d188b4ae80023a7dc40ae",
+        "url": "ShadesKillerPlugin.jar"
+    },
+    {
+        "internalName": "ChatbotPlugin",
+        "name": "Chatbot",
+        "description": "AI-powered chatbot using OpenAI. Reads in-game chat and responds intelligently.",
+        "tags": [
+            "chatbot",
+            "openai",
+            "ai",
+            "chat",
+            "gpt"
+        ],
+        "version": "1.0.0",
+        "minClientVersion": "1.9.8",
+        "authors": [
+            "Bender"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "0c7f085ac07f69fb5e9d39c3ae95c00dd63953257e873b19c9e6d0e7b791961c",
+        "url": "ChatbotPlugin.jar"
+    },
+    {
+        "internalName": "AutoEssenceMiningPlugin",
+        "name": "Essence Mining",
+        "description": "Mines Rune/Pure Essence...",
+        "tags": [
+            "mining",
+            "essence",
+            "skilling"
+        ],
+        "version": "1.0.2",
+        "minClientVersion": "1.9.8",
+        "authors": [
+            "Unknown"
+        ],
+        "iconUrl": "AutoEssenceMiningPlugin/assets/icon.png",
+        "cardUrl": "AutoEssenceMiningPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "35b76c225749c9e516fe512fe851d0418b36c76398e8c707d91cc775c5580e9d",
+        "url": "AutoEssenceMiningPlugin.jar"
+    },
+    {
+        "internalName": "ColosseumPrayerPlugin",
+        "name": "Fortis Colosseum Prayer",
+        "description": "Prayer helper for Fortis Colosseum waves 1\u201311: manticore, javelin colossus, serpent shaman, jaguar warrior, shockwave colossus.",
+        "tags": [
+            "colosseum",
+            "fortis",
+            "prayer",
+            "cupidbot"
+        ],
+        "version": "1.0.3",
+        "minClientVersion": "1.9.8.8",
+        "authors": [
+            "CupidBot Hub"
+        ],
+        "iconUrl": "ColosseumPrayerPlugin/assets/icon.png",
+        "cardUrl": "ColosseumPrayerPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "21bf7049b387884e035996a1c1f9ca73a83f99c3103d4fa63de240f643bcc9f0",
+        "url": "ColosseumPrayerPlugin.jar"
+    },
+    {
+        "internalName": "TzhaarVenatorBowPlugin",
+        "name": "Tzhaar Venator",
+        "description": "Automatically kills Tzhaars with the Venator Bow",
+        "tags": [
+            "Tzhaar",
+            "Venator",
+            "bow",
+            "range",
+            "xp",
+            "cupidbot"
+        ],
+        "version": "1.0.2",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "580c77dc942a722ebad283e43eca09d7bcbd480c4a160c31b63df9454229b5bd",
+        "url": "TzhaarVenatorBowPlugin.jar"
+    },
+    {
+        "internalName": "SandCrabPlugin",
+        "name": "SandCrabs",
+        "description": "Kills SandCrab & resets",
+        "tags": [
+            "Combat",
+            "cupidbot",
+            "sand",
+            "crab",
+            "sandcrab",
+            "attack",
+            "kill"
+        ],
+        "version": "1.5.4",
+        "minClientVersion": "2.1.32",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "d6bae860c61dcea090e025601b8b28ec182d6259f355f12e2bdd5aa04d38fa3a",
+        "url": "SandCrabPlugin.jar"
+    },
+    {
+        "internalName": "TemporossPlugin",
+        "name": "Tempoross",
+        "description": "Tempoross Plugin",
+        "tags": [
+            "Tempoross",
+            "minigame",
+            "s1d",
+            "see1duck",
+            "cupidbot",
+            "fishing",
+            "skilling"
+        ],
+        "version": "2.0.0",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "30df2ad60bcbb916d0094029aa94269ddce4f52a9679af48364b684831696126",
+        "url": "TemporossPlugin.jar"
+    },
+    {
+        "internalName": "CannonballSmelterPlugin",
+        "name": "Cannonball Smelter",
+        "description": "Makes cannonballs",
+        "tags": [
+            "smithing",
+            "girdy",
+            "skilling"
+        ],
+        "version": "1.1.1",
+        "minClientVersion": "1.9.9.1",
+        "authors": [
+            "Girdy",
+            "Engin"
+        ],
+        "iconUrl": "CannonballSmelterPlugin/assets/icon.png",
+        "cardUrl": "CannonballSmelterPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "4e29ba14ca8cad755a36e664f2116923a3c1b447ed6c21a12198decbc76e79c9",
+        "url": "CannonballSmelterPlugin.jar"
+    },
+    {
+        "internalName": "BanksBankStanderPlugin",
+        "name": "Bank's BankStander",
+        "description": "For Skilling at the Bank",
+        "tags": [
+            "bankstander",
+            "bank.js",
+            "bank",
+            "eXioStorm",
+            "storm"
+        ],
+        "version": "2.1.1",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "Bankjs"
+        ],
+        "iconUrl": "BanksBankStanderPlugin/assets/icon.png",
+        "cardUrl": "BanksBankStanderPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "5e7cf66cb7adcfc9034f427dd750b67aa564893b222c3d5aafa91e0f114a2cb4",
+        "url": "BanksBankStanderPlugin.jar"
+    },
+    {
+        "internalName": "ScurriusPlugin",
+        "name": "Scurrius",
+        "description": "Scurrius example plugin",
+        "tags": [
+            "cupidbot",
+            "scurrius",
+            "boss"
+        ],
+        "version": "1.0.2",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "3df0ca58aa822f3cf58b97d901ea57c242186c9cdc8e7733867f5b25b012e903",
+        "url": "ScurriusPlugin.jar"
+    },
+    {
+        "internalName": "ConstructionPlugin",
+        "name": "Construction 2",
+        "description": "Geoff's CupidBot construction plugin with added new bits.",
+        "tags": [
+            "skilling",
+            "cupidbot",
+            "construction"
+        ],
+        "version": "1.3.2",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "0e7ae07af1b62e0c0cbbfbfd08a6f6b846fb12c82e1e4272f21e105c9085047d",
+        "url": "ConstructionPlugin.jar"
+    },
+    {
+        "internalName": "RecruiterPlugin",
+        "name": "Clan Recruiter",
+        "description": "Recruits people at GE to your clan",
+        "tags": [
+            "recruit",
+            "clan",
+            "type",
+            "keyboard",
+            "typer",
+            "Auto-typer",
+            "cupidbot"
+        ],
+        "version": "1.0.3",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "Bee"
+        ],
+        "iconUrl": "RecruiterPlugin/assets/icon.jpg",
+        "cardUrl": "RecruiterPlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "ddcb865b33fab73d6527e6ccb31230c09b1374159b40b9cb4f5322e522293fc4",
+        "url": "RecruiterPlugin.jar"
+    },
+    {
+        "internalName": "DelvePrayerHelperPlugin",
+        "name": "Delve Prayer Helper",
+        "description": "Automatically prays against the Delve boss attacks",
+        "tags": [
+            "delve",
+            "doom of mokhaiotl",
+            "mokha",
+            "pvm",
+            "boss"
+        ],
+        "version": "1.0.0",
+        "minClientVersion": "2.0.0",
+        "authors": [
+            "Engin"
+        ],
+        "iconUrl": "DelvePrayerHelperPlugin/assets/icon.png",
+        "cardUrl": "DelvePrayerHelperPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "51ec5faf5fcd20548c9b58c78b7694d011e160723c36e962844673b8cab1257c",
+        "url": "DelvePrayerHelperPlugin.jar"
+    },
+    {
+        "internalName": "AIOMagicPlugin",
+        "name": "AIO Magic",
+        "description": "CupidBot Magic plugin",
+        "tags": [
+            "magic",
+            "cupidbot",
+            "skilling",
+            "training"
+        ],
+        "version": "1.2.8",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "AIOMagicPlugin/assets/icon.png",
+        "cardUrl": "AIOMagicPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "bca71e75eee6eb0dc139205d187b73cb0bd46d131ff41593b0d0ebe613291380",
+        "url": "AIOMagicPlugin.jar"
+    },
+    {
+        "internalName": "FarmTreeRunPlugin",
+        "name": "Farm tree runner",
+        "description": "Acun's farm tree runner. Supports regular, fruit and hardwood trees",
+        "tags": [
+            "Farming",
+            "Tree run"
+        ],
+        "version": "1.2.1",
+        "minClientVersion": "2.1.0",
+        "authors": [
+            "Acun"
+        ],
+        "iconUrl": "FarmTreeRunPlugin/assets/icon.jpg",
+        "cardUrl": "FarmTreeRunPlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "c7829e9596d021166f7c53f382b9ad59c11d4338f0b141aacdd3b9e04e0cab7c",
+        "url": "FarmTreeRunPlugin.jar"
+    },
+    {
+        "internalName": "TormentedDemonPlugin",
+        "name": "Tormented Demons",
+        "description": "Automates restocking, prayer flicking, and gear switching during Tormented Demon",
+        "tags": [
+            "tormented",
+            "flicker",
+            "weapon",
+            "switch",
+            "cupidbot"
+        ],
+        "version": "1.2.3",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "873f4f5fbc7754af80df8bc1c0b991bfde1c21b6af2f01d3f04df952852144e2",
+        "url": "TormentedDemonPlugin.jar"
+    },
+    {
+        "internalName": "AutoGauntletPrayerPlugin",
+        "name": "Auto Gauntlet Prayer",
+        "description": "Auto Gauntlet Prayer plugin",
+        "tags": [
+            "liftedmango",
+            "Gauntlet",
+            "pvm",
+            "prayer",
+            "money making",
+            "auto",
+            "boss"
+        ],
+        "version": "1.0.8",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "8b58f4d601a58b6330b75ac0bfc3c411a72d2344711ad37c33ff26f16a488058",
+        "url": "AutoGauntletPrayerPlugin.jar"
+    },
+    {
+        "internalName": "RoguesDenPlugin",
+        "name": "Rogues' Den",
+        "description": "Mark tiles and clickboxes to help traverse the maze",
+        "tags": [
+            "agility",
+            "maze",
+            "minigame",
+            "overlay",
+            "thieving",
+            "cupidbot",
+            "rogue",
+            "den"
+        ],
+        "version": "1.0.1",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "Mocrosoft"
+        ],
+        "iconUrl": "RoguesDenPlugin/assets/icon.jpg",
+        "cardUrl": "RoguesDenPlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "e0ca00d716897ad732dd9b1c6b7474f670fbca2c172408185c50ac7f5ad29653",
+        "url": "RoguesDenPlugin.jar"
+    },
+    {
+        "internalName": "AttackRangesPlusPlugin",
+        "name": "<html>[<font color=#BB86FC>P</font>] ",
+        "description": "Draws your attack range (and optionally your target's), auto-detected from your weapon and clipped to line of sight.",
+        "tags": [
+            "range",
+            "pvp",
+            "combat",
+            "overlay"
+        ],
+        "version": "0.2.3",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "pjmarz"
+        ],
+        "iconUrl": "AttackRangesPlusPlugin/assets/icon.png",
+        "cardUrl": "AttackRangesPlusPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "65ba3b0eb3b3a65e5aa002bd7b74356598e6aab14073a12e33ceba0086b94c76",
+        "url": "AttackRangesPlusPlugin.jar"
+    },
+    {
+        "internalName": "SisyphusInfernalPactPlugin",
+        "name": "<html>[<font color=#ff4c4c>SIS</font>] ",
+        "description": "Automates Yama's stepping-stone circuit \u2014 avoids fire, loops the route, spam-clicks safe stones.",
+        "tags": [
+            "leagues",
+            "sisyphus",
+            "yama",
+            "demonic",
+            "pacts",
+            "infernal",
+            "stepping stones"
+        ],
+        "version": "1.0.0",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Sisyphus"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "7de4ec5564748010807f222ad3fe6c033c78bdf04e7218f17770045110724f06",
+        "url": "SisyphusInfernalPactPlugin.jar"
+    },
+    {
+        "internalName": "QoLPlugin",
+        "name": "QoL",
+        "description": "Quality of Life Plugin",
+        "tags": [
+            "QoL",
+            "cupidbot"
+        ],
+        "version": "1.8.14",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "cee9f29a5c45a9c979d8523f2fd24f1286d2888dc5d381a3e2bc13fd5312d77b",
+        "url": "QoLPlugin.jar"
+    },
+    {
+        "internalName": "HumidifierPlugin",
+        "name": "Humidifier",
+        "description": "Nate's Humidifier",
+        "tags": [
+            "magic",
+            "nate",
+            "humidifier",
+            "moneymaking"
+        ],
+        "version": "1.6.2",
+        "minClientVersion": "2.0.1",
+        "authors": [
+            "Nate"
+        ],
+        "iconUrl": "HumidifierPlugin/assets/icon.png",
+        "cardUrl": "HumidifierPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "86899d8c398db2385f746a558d6af5193dce69bd5a65b86783ddceb5d5516ae9",
+        "url": "HumidifierPlugin.jar"
+    },
+    {
+        "internalName": "ClueSolverPlugin",
+        "name": "Clue Solver",
+        "description": "Automates solving clue scrolls by managing interactions",
+        "tags": [
+            "clue",
+            "solver",
+            "automation"
+        ],
+        "version": "1.0.5",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "unknown"
+        ],
+        "iconUrl": "ClueSolverPlugin/assets/icon.png",
+        "cardUrl": "ClueSolverPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "7cc1ca5026bbcfd65e268ba2b178662318361e45fe1b0dfac0cd96b5d0eed69c",
+        "url": "ClueSolverPlugin.jar"
+    },
+    {
+        "internalName": "AutoHunterPlugin",
+        "name": "AutoHunter",
+        "description": "CupidBot AutoHunter plugin",
+        "tags": [
+            "hunter",
+            "cupidbot"
+        ],
+        "version": "1.1.1",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "3af16d770fae40c281b0ac2959e656ecca028f4ea49562d9f68eefc459547faf",
+        "url": "AutoHunterPlugin.jar"
+    },
+    {
+        "internalName": "GEFiremakerPlugin",
+        "name": "GE Firemaker",
+        "description": "Uses logs on campfires around the Grand Exchange.",
+        "tags": [
+            "firemaking",
+            "campfire",
+            "grand",
+            "exchange",
+            "ge"
+        ],
+        "version": "1.0.1",
+        "minClientVersion": "1.9.6",
+        "authors": [
+            "StickToTheScript"
+        ],
+        "iconUrl": "GEFiremakerPlugin/assets/firemaking.png",
+        "cardUrl": "GEFiremakerPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "c72e7343e7bff8092e8b955f877ade2303cd0c80c38376a42de0526a5de811c3",
+        "url": "GEFiremakerPlugin.jar"
+    },
+    {
+        "internalName": "AutoFishingPlugin",
+        "name": "Fishing",
+        "description": "Automated fishing plugin with banking support",
+        "tags": [
+            "fishing",
+            "skilling"
+        ],
+        "version": "1.0.12",
+        "minClientVersion": "1.9.8",
+        "authors": [
+            "AI Agent"
+        ],
+        "iconUrl": "AutoFishingPlugin/assets/icon.png",
+        "cardUrl": "AutoFishingPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "c99289abdcc36f09519cec6e21f09044e7cd7a90547dc7a403ac402d12bdd710",
+        "url": "AutoFishingPlugin.jar"
+    },
+    {
+        "internalName": "TheatrePlugin",
+        "name": "Theatre of Blood Overlay",
+        "description": "All-in-one plugin providing overlays and helpers for every Theatre of Blood room.",
+        "tags": [
+            "ToB",
+            "Theatre",
+            "raids",
+            "bloat",
+            "verzik",
+            "nylo",
+            "xarpus",
+            "sotetseg",
+            "maiden",
+            "cupidbot"
+        ],
+        "version": "1.0.0",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Syntax"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "1be9eabf4202c8bcece249e351421652dda5f91daa7de42baff7985eee315481",
+        "url": "TheatrePlugin.jar"
+    },
+    {
+        "internalName": "AnonymousPlugin",
+        "name": "Anonymous Mode",
+        "description": "Hide your in-game identity.",
+        "tags": [
+            "chat",
+            "mask",
+            "hide",
+            "anonymous"
+        ],
+        "version": "1.0.3",
+        "minClientVersion": "1.9.6",
+        "authors": [
+            "Bolado"
+        ],
+        "iconUrl": "AnonymousPlugin/assets/icon.png",
+        "cardUrl": "AnonymousPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "1e22f6695e601a233d877a5cb8616355923b23e2bb46a7203bc2f1aa35cf42e7",
+        "url": "AnonymousPlugin.jar"
+    },
+    {
+        "internalName": "CharterCrafterPlugin",
+        "name": "Charter Crafter",
+        "description": "Charter crafting plugin (UIM-friendly)",
+        "tags": [
+            "charter",
+            "crafting"
+        ],
+        "version": "1.0.1",
+        "minClientVersion": "1.9.8",
+        "authors": [
+            "heapoverfl0w"
+        ],
+        "iconUrl": "CharterCrafterPlugin/assets/icon.png",
+        "cardUrl": "CharterCrafterPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "6543198fb36773d1e82b4014923a5f2d90d261cd502bd850023eafd0bdb71834",
+        "url": "CharterCrafterPlugin.jar"
+    },
+    {
+        "internalName": "HerbrunPlugin",
+        "name": "Herb runner",
+        "description": "Herb runner",
+        "tags": [
+            "herb",
+            "farming",
+            "money making",
+            "skilling"
+        ],
+        "version": "1.2.0",
+        "minClientVersion": "2.1.0",
+        "authors": [
+            "Mocrosoft"
+        ],
+        "iconUrl": "HerbrunPlugin/assets/icon.jpg",
+        "cardUrl": "HerbrunPlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "98a6cd4c97e9489e5e4e73d7f97f3bb7eb279077f0f597341493bc580ba9a19b",
+        "url": "HerbrunPlugin.jar"
+    },
+    {
+        "internalName": "PyreFoxPlugin",
+        "name": "<html>[<font color=orange>KaaS</font>]",
+        "description": "Hunts pyre foxes for you!",
+        "tags": [
+            "kaas",
+            "hunter",
+            "pyre",
+            "fox"
+        ],
+        "version": "1.0.9",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "8b3eed19aa4a21d3a631dd442262c3c0c163af333a706a4489a7182e21c4f384",
+        "url": "PyreFoxPlugin.jar"
+    },
+    {
+        "internalName": "JewelleryEnchantPlugin",
+        "name": "Jewellery Enchant",
+        "description": "Enchants all types of jewellery, with smart staff & rune handling.",
+        "tags": [
+            "magic",
+            "enchant",
+            "jewellery",
+            "skilling",
+            "cupidbot"
+        ],
+        "version": "1.0.1",
+        "minClientVersion": "1.9.8",
+        "authors": [
+            "Lumusi"
+        ],
+        "iconUrl": "JewelleryEnchantPlugin/assets/icon.png",
+        "cardUrl": "JewelleryEnchantPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "dcd2889e35d9ee1f9d6f1f7e6ae97aaade5fccd98f265cb2e25266e1a3615326",
+        "url": "JewelleryEnchantPlugin.jar"
+    },
+    {
+        "internalName": "AmmoniteCrabPlugin",
+        "name": "AmmoniteCrabs",
+        "description": "Kills AmmoniteCrabs & resets",
+        "tags": [
+            "Combat",
+            "TaF",
+            "crabs",
+            "AmmoniteCrabs"
+        ],
+        "version": "1.1.3",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "dc444094a5a854e809afa7406cac5e8113f61ba7dcac1f1592c4cfa202905cbf",
+        "url": "AmmoniteCrabPlugin.jar"
+    },
+    {
+        "internalName": "GiantSeaweedFarmerPlugin",
+        "name": "Giant Seaweed",
+        "description": "Farms giant seaweed.",
+        "tags": [
+            "GiantSeaweedFarmer",
+            "seaweed",
+            "farming",
+            "ironman",
+            "taf",
+            "cupidbot"
+        ],
+        "version": "1.2.1",
+        "minClientVersion": "2.1.0",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "4454dec2b3b1ef1d9af88fc5abd60b03fb11b9cbb038bff0254b238e310ff117",
+        "url": "GiantSeaweedFarmerPlugin.jar"
+    },
+    {
+        "internalName": "KrakenPlugin",
+        "name": "Kraken",
+        "description": "AFK Kraken boss: disturbs whirlpools, auto-fights, loots.",
+        "tags": [
+            "kraken",
+            "boss",
+            "slayer",
+            "afk"
+        ],
+        "version": "1.0.0",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Pert"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "8d9b6b1da4e6b0148f3d56544093cc4c304d1813e3c0cfeb119c0d8c03bea5be",
+        "url": "KrakenPlugin.jar"
+    },
+    {
+        "internalName": "BradleyCombatPlugin",
+        "name": "Bradley Combat",
+        "description": "A plugin for managing combat swaps, special attacks, prayer toggles, and food/potion actions via hotkeys.",
+        "tags": [
+            "combat",
+            "hotkeys",
+            "cupidbot"
+        ],
+        "version": "1.0.1",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "Bradley"
+        ],
+        "iconUrl": "BradleyCombatPlugin/assets/icon.jpg",
+        "cardUrl": "BradleyCombatPlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "3336d369f335852926c264d8244fca25aa319dd96ddaeba3039b9fbaa65bc5b6",
+        "url": "BradleyCombatPlugin.jar"
+    },
+    {
+        "internalName": "ButterflyCatcherPlugin",
+        "name": "Butterfly Catcher",
+        "description": "Automates butterfly and moth catching for Hunter XP. Stand near a spawn, pick your species and mode, start the plugin.",
+        "tags": [
+            "hunter",
+            "butterfly",
+            "moth",
+            "sunlight",
+            "moonlight",
+            "net",
+            "cupidbot",
+            "stonkscode"
+        ],
+        "version": "1.0.1",
+        "minClientVersion": "2.0.8",
+        "authors": [
+            "StonksCode"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "ec5cccacb212600e80309ac6e8f136ed66db87b088f144f16b4e6cca466d08a3",
+        "url": "ButterflyCatcherPlugin.jar"
+    },
+    {
+        "internalName": "FlippersChaserPlugin",
+        "name": "Flippers Chaser",
+        "description": "Automates obtaining Flippers from Mogres",
+        "tags": [
+            "service",
+            "automation",
+            "combat",
+            "cupidbot"
+        ],
+        "version": "1.0.2",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "Bttqjs"
+        ],
+        "iconUrl": "FlippersChaserPlugin/assets/icon.jpg",
+        "cardUrl": "FlippersChaserPlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "a472c9ea59329dce50e66638cdb61826b27f6ea3c72f5ad48abf6426b98fc6b3",
+        "url": "FlippersChaserPlugin.jar"
+    },
+    {
+        "internalName": "AmethystMiningPlugin",
+        "name": " Amethyst Miner",
+        "description": "Automates mining amethyst in the mining guild",
+        "tags": [
+            "mining",
+            "amethyst",
+            "mining guild"
+        ],
+        "version": "1.2.4",
+        "minClientVersion": "2.1.0",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "1402c9c7a203c54d9fef1ff0789cd5530dd01508180c5a47bc2611c650aaac84",
+        "url": "AmethystMiningPlugin.jar"
+    },
+    {
+        "internalName": "SulphurNaguaPlugin",
+        "name": "Sulphur Nagua Fighter",
+        "description": "Automatically fights Sulphur Naguas in Varlamore, handling potions and combat.",
+        "tags": [
+            "combat",
+            "pvm",
+            "nagua",
+            "varlamore",
+            "cupidbot"
+        ],
+        "version": "2.0.1",
+        "minClientVersion": "1.9.8",
+        "authors": [
+            "VIP"
+        ],
+        "iconUrl": "SulphurNaguaPlugin/assets/icon.png",
+        "cardUrl": "SulphurNaguaPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "f03e130c753303f12bd458dd4d126017c87a220f9b918a2f2f6939cd1f79ab78",
+        "url": "SulphurNaguaPlugin.jar"
+    },
+    {
+        "internalName": "AttackTimerMetronomePlugin",
+        "name": "Prayer Helper",
+        "description": "Prayer helper",
+        "tags": [
+            "timers",
+            "overlays",
+            "tick",
+            "Lazy Flicking",
+            "Prayer"
+        ],
+        "version": "1.5.0",
+        "minClientVersion": "2.0.14",
+        "authors": [
+            "ZeroZero"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "f7e65f914fba46a92b459bd96a1ec2feae2c278b6b9ca6854c62d804bfb30be5",
+        "url": "AttackTimerMetronomePlugin.jar"
+    },
+    {
+        "internalName": "NmzPlugin",
+        "name": "Nmz",
+        "description": "Plays the nightmare zone minigame",
+        "tags": [
+            "nmz",
+            "cupidbot"
+        ],
+        "version": "2.4.1",
+        "minClientVersion": "2.1.0",
+        "authors": [
+            "Mocrosoft"
+        ],
+        "iconUrl": "NmzPlugin/assets/icon.png",
+        "cardUrl": "NmzPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "872a569db5045112facff71165ae050f2a2b9ba32cf47c55fa053340a3fd7f6c",
+        "url": "NmzPlugin.jar"
+    },
+    {
+        "internalName": "CupidBotDashboardPlusPlugin",
+        "name": "<html>[<font color=#BB86FC>P</font>] ",
+        "description": "Native Swing monitoring dashboard for your CupidBot session. Floating window plus a compact sidebar panel. No HTTP, no Agent Server dependency.",
+        "tags": [
+            "dashboard",
+            "monitoring",
+            "cupidbot",
+            "plus"
+        ],
+        "version": "1.2.1",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "pjmarz"
+        ],
+        "iconUrl": "CupidBotDashboardPlusPlugin/assets/icon.png",
+        "cardUrl": "CupidBotDashboardPlusPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "5595d904465dc954bedbb89780507dd454bbc9b5e61b44698af6d1283367c8a1",
+        "url": "CupidBotDashboardPlusPlugin.jar"
+    },
+    {
+        "internalName": "EelFishingPlugin",
+        "name": " Eel Fishing",
+        "description": "Automates fishing for Infernal and Sacred eels",
+        "tags": [
+            "fishing",
+            "eel",
+            "cupidbot"
+        ],
+        "version": "1.0.1",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "See1Duck"
+        ],
+        "iconUrl": "EelFishingPlugin/assets/icon.jpg",
+        "cardUrl": "EelFishingPlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "a73eb30bab032dbc1be18abedbd0a14ef2452631bc1fe919cce9e3b43c853e4f",
+        "url": "EelFishingPlugin.jar"
+    },
+    {
+        "internalName": "HouseThievingPlugin",
+        "name": "House Thieving",
+        "description": "House Thieving",
+        "tags": [
+            "thieving",
+            "house thieving"
+        ],
+        "version": "1.1.0",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "Maxxin"
+        ],
+        "iconUrl": "HouseThievingPlugin/assets/icon.png",
+        "cardUrl": "HouseThievingPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "c21b5e2db0b6c0d4312871fb0329eb8e2b7af229a4e18dfc7596288b5ca7d14d",
+        "url": "HouseThievingPlugin.jar"
+    },
+    {
+        "internalName": "PiePlugin",
+        "name": "Pie Shell Maker",
+        "description": "Nate's Pie Shell Maker",
+        "tags": [
+            "MoneyMaking",
+            "nate",
+            "pies"
+        ],
+        "version": "1.2.1",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "Nate"
+        ],
+        "iconUrl": "PiePlugin/assets/icon.png",
+        "cardUrl": "PiePlugin/assets/card.png",
+        "disable": false,
+        "sha256": "0fa54f133f706f1ca4f16461a70ec63c5653bc0bc32ed58c2cb41356e0393551",
+        "url": "PiePlugin.jar"
+    },
+    {
+        "internalName": "AerialFishingPlugin",
+        "name": " Aerial Fisher",
+        "description": "Aerial Fishing plugin",
+        "tags": [
+            "Fishing",
+            "cupidbot",
+            "Aerial",
+            "skilling"
+        ],
+        "version": "1.1.2",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "See1Duck"
+        ],
+        "iconUrl": "AerialFishingPlugin/assets/icon.jpg",
+        "cardUrl": "AerialFishingPlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "ce5a407ac00b363e344d3e78f1b61d442df8b9c42461a38081f4b12c004d11c4",
+        "url": "AerialFishingPlugin.jar"
+    },
+    {
+        "internalName": "BrimhavenAgilityBotPlugin",
+        "name": "Brimhaven Agility Bot",
+        "description": "Restocks, enters, and routes Brimhaven Agility Arena tickets and vouchers.",
+        "tags": [
+            "brimhaven",
+            "agility",
+            "ticket",
+            "voucher",
+            "minigame",
+            "cupidbot"
+        ],
+        "version": "1.0.13",
+        "minClientVersion": "2.6.12",
+        "authors": [
+            "Mocrosoft"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "2749907cf51f992c22724088e0ebc8506bb53d6513c7a05bb57038b163a2af42",
+        "url": "BrimhavenAgilityBotPlugin.jar"
+    },
+    {
+        "internalName": "DemonicGorillaPlugin",
+        "name": "Demonic Gorillas",
+        "description": "Automates restocking, prayer flicking, and gear switching during Demonic Gorillas",
+        "tags": [
+            "demonic",
+            "Gorilla",
+            "flicker",
+            "weapon",
+            "switch",
+            "cupidbot"
+        ],
+        "version": "1.2.5",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "55dbd704cb2c50534a7d544590e7592a5b197408d19e25c67632c49d03ca3251",
+        "url": "DemonicGorillaPlugin.jar"
+    },
+    {
+        "internalName": "FletchingPlugin",
+        "name": "Fletcher",
+        "description": "CupidBot fletching plugin",
+        "tags": [
+            "fletching",
+            "cupidbot",
+            "skills"
+        ],
+        "version": "1.7.0",
+        "minClientVersion": "1.9.9.1",
+        "authors": [
+            "Mocrosoft"
+        ],
+        "iconUrl": "FletchingPlugin/assets/icon.png",
+        "cardUrl": "FletchingPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "6aca69f1813bd0ffc9c52b98d78f8461a8a7a2621e16a193b60987c1902fdccf",
+        "url": "FletchingPlugin.jar"
+    },
+    {
+        "internalName": "GiantsFoundryPlugin",
+        "name": "GiantsFoundry",
+        "description": "CupidBot giants foundry plugin",
+        "tags": [
+            "minigame",
+            "cupidbot",
+            "smithing"
+        ],
+        "version": "1.0.7",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "80cef8f8a46eb2eafa39314c9eeea23c119335e1bb95ec67a8ecbedd7b83cc6e",
+        "url": "GiantsFoundryPlugin.jar"
+    },
+    {
+        "internalName": "GotrPlugin",
+        "name": "GuardiansOfTheRift",
+        "description": "Guardians of the rift plugin",
+        "tags": [
+            "runecrafting",
+            "guardians of the rift",
+            "gotr",
+            "cupidbot"
+        ],
+        "version": "1.5.7",
+        "minClientVersion": "2.1.0",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "20a4b71e7a10eee36c9b41fc7dab4cf9266b78d9034fc97d79cf0a0c2ac80351",
+        "url": "GotrPlugin.jar"
+    },
+    {
+        "internalName": "RcPlugin",
+        "name": "Frosty Rc",
+        "description": "A plugin to automate Rune crafting",
+        "tags": [
+            "blood",
+            "rc",
+            "rune",
+            "frosty",
+            "wrath"
+        ],
+        "version": "1.1.4",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "Frosty"
+        ],
+        "iconUrl": "RcPlugin/assets/icon.jpg",
+        "cardUrl": "RcPlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "958b9ab9d9955c1833422222d94eb4cb8949c099d4904ddcb68abf880c240de7",
+        "url": "RcPlugin.jar"
+    },
+    {
+        "internalName": "MSailingPlugin",
+        "name": "Sailing",
+        "description": "CupidBot Sailing Plugin",
+        "tags": [
+            "sailing"
+        ],
+        "version": "2.2.56",
+        "minClientVersion": "2.1.0",
+        "authors": [
+            "Mocrosoft"
+        ],
+        "iconUrl": "MSailingPlugin/assets/icon.jpg",
+        "cardUrl": "MSailingPlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "de0375ddaf6ebf8d1b7b1a6d5e04e91365bf5f2016953e727b7a988f829a1a89",
+        "url": "MSailingPlugin.jar"
+    },
+    {
+        "internalName": "PestControlPlugin",
+        "name": "Pest Control",
+        "description": "Supports all boats, portals, and shields.",
+        "tags": [
+            "pest control",
+            "minigames"
+        ],
+        "version": "2.3.4",
+        "minClientVersion": "2.1.0",
+        "authors": [
+            "Mocrosoft"
+        ],
+        "iconUrl": "PestControlPlugin/assets/icon.png",
+        "cardUrl": "PestControlPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "264bb829830746cfcc6eb4f3340296d9b1f06b31f2bc4208240ecf1791beafe5",
+        "url": "PestControlPlugin.jar"
+    },
+    {
+        "internalName": "VolcanicAshMinerPlugin",
+        "name": "Volcanic Ash Miner",
+        "description": "Start either at the ash mine on Fossil Island or with a digsite pendant in your inventory. Have a pickaxe in your inventory or equipped.",
+        "tags": [
+            "volcanic",
+            "ash",
+            "mining",
+            "ironman",
+            "taf",
+            "cupidbot"
+        ],
+        "version": "1.2.0",
+        "minClientVersion": "2.1.0",
+        "authors": [
+            "TaF"
+        ],
+        "iconUrl": "volcanicashminer/assets/icon.png",
+        "cardUrl": "volcanicashminer/assets/card.png",
+        "disable": false,
+        "sha256": "4823a2863fae77816b6f55e2c3129f66ebfd272e1108133d4b8859aecac661fc",
+        "url": "VolcanicAshMinerPlugin.jar"
+    },
+    {
+        "internalName": "JadPlugin",
+        "name": "Jad Helper",
+        "description": "Auto prays jad attacks and attacks healers",
+        "tags": [
+            "jad",
+            "cupidbot"
+        ],
+        "version": "1.0.9",
+        "minClientVersion": "1.9.8.8",
+        "authors": [
+            "Mocrosoft"
+        ],
+        "iconUrl": "JadPlugin/assets/icon.png",
+        "cardUrl": "JadPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "605bb9149cea5b1d7471a8ad6ca2b9781076e717f68c8848cd5d76b0e12efeea",
+        "url": "JadPlugin.jar"
+    },
+    {
+        "internalName": "KittenPlugin",
+        "name": " Kitten Tracker",
+        "description": "Automates the kitten growth process and provides notifications",
+        "tags": [
+            "cat",
+            "kitten",
+            "duck",
+            "s1d",
+            "see1duck",
+            "cupidbot"
+        ],
+        "version": "1.3.1",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "cf386af9e2ff03ee6565ebf00f86a29afcd3b59dc50163ba9e39ccf4c4ba8adb",
+        "url": "KittenPlugin.jar"
+    },
+    {
+        "internalName": "PVirewatchKillerPlugin",
+        "name": "Vyrewatch Killer",
+        "description": "Pumsters vyrewatch killer",
+        "tags": [
+            "pumster",
+            "cupidbot",
+            "Vyrewatch"
+        ],
+        "version": "1.0.3",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "Pumsters"
+        ],
+        "iconUrl": "PVirewatchKillerPlugin/assets/icon.png",
+        "cardUrl": "PVirewatchKillerPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "0d6d50adbd82dbfbad58d02e3ba5718e902247be02c5f961dab632794b14958b",
+        "url": "PVirewatchKillerPlugin.jar"
+    },
+    {
+        "internalName": "PumperPlugin",
+        "name": "Pumper",
+        "description": "LiftedMango's Pumper",
+        "tags": [
+            "pure",
+            "strength",
+            "str",
+            "pump",
+            "blast furnace"
+        ],
+        "version": "1.0.7",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "55aba4be937aab8f86bc104ba067b81af8a7115de70f251b83ae091fa1b14832",
+        "url": "PumperPlugin.jar"
+    },
+    {
+        "internalName": "AutoFiremakingPlusPlugin",
+        "name": "<html>[<font color=#BB86FC>P</font>] ",
+        "description": "Firemaking trainer: add logs to a Forester's Campfire or light a line of fires, with stop conditions, target level, and overlay/pause.",
+        "tags": [
+            "firemaking",
+            "campfire",
+            "skilling",
+            "cupidbot",
+            "plus"
+        ],
+        "version": "0.2.2",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "pjmarz"
+        ],
+        "iconUrl": "AutoFiremakingPlusPlugin/assets/icon.png",
+        "cardUrl": "AutoFiremakingPlusPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "bc05e6ea3f81eb829863dd6a4342c8cddcdd1fd17e492a9d983813adef95a162",
+        "url": "AutoFiremakingPlusPlugin.jar"
+    },
+    {
+        "internalName": "AutoChompyKillerPlugin",
+        "name": "Chompy Killer",
+        "description": "Automated chompy bird hunting plugin...",
+        "tags": [
+            "chompy",
+            "combat"
+        ],
+        "version": "1.0.1",
+        "minClientVersion": "1.9.8",
+        "authors": [
+            "Unknown"
+        ],
+        "iconUrl": "AutoChompyKillerPlugin/assets/icon.png",
+        "cardUrl": "AutoChompyKillerPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "531934d0fe4b6e2041af3c7f85e9f50e2baed30c976e3868f405dddef7ab7a0c",
+        "url": "AutoChompyKillerPlugin.jar"
+    },
+    {
+        "internalName": "DeadFallTrapHunterPlugin",
+        "name": "Deadfall Trap Hunter",
+        "description": "Automates hunting all creatures with Deadfall traps",
+        "tags": [
+            "hunter",
+            "deadfall",
+            "skilling",
+            "xp",
+            "loot",
+            "TaF"
+        ],
+        "version": "1.1.0",
+        "minClientVersion": "2.1.0",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "0f35c31269e4d25a5392df63016febd4052187a18eed24a55f20b479bc453733",
+        "url": "DeadFallTrapHunterPlugin.jar"
+    },
+    {
+        "internalName": "RoyalTitansPlugin",
+        "name": "Royal Titans",
+        "description": "Kills the Royal Titans boss with another bot",
+        "tags": [
+            "Combat",
+            "bossing",
+            "TaF",
+            "Royal Titans",
+            "Ice giant",
+            "Fire giant",
+            "Duo"
+        ],
+        "version": "1.1.0",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "d3dfe4f6786b8c12c496bb133a7906f28e85537a6c31efa09dd339d1d7ac89a5",
+        "url": "RoyalTitansPlugin.jar"
+    },
+    {
+        "internalName": "AIOFighterPlugin",
+        "name": "AIO Fighter",
+        "description": "CupidBot AIO Fighter plugin",
+        "tags": [
+            "fight",
+            "cupidbot",
+            "misc",
+            "combat",
+            "playerassistant"
+        ],
+        "version": "2.2.0",
+        "minClientVersion": "2.1.32",
+        "authors": [
+            "Mocrosoft",
+            "See1Duck"
+        ],
+        "iconUrl": "AIOFighterPlugin/assets/icon.png",
+        "cardUrl": "AIOFighterPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "805035e6cbf18a8d963e6db3c0447b55ca848734f31edd75b28085ef6b667868",
+        "url": "AIOFighterPlugin.jar"
+    },
+    {
+        "internalName": "GabulhasGoldRushPlugin",
+        "name": "Gold Rush",
+        "description": "",
+        "tags": [
+            "GabulhasGoldRush",
+            "Gabulhas"
+        ],
+        "version": "1.0.7",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "ad83a273f1efbe72066707da0d67ee32f58c7840d157291629790ae908c70ca1",
+        "url": "GabulhasGoldRushPlugin.jar"
+    },
+    {
+        "internalName": "MahoganyHomesPlugin",
+        "name": " Mahogany Homes",
+        "description": "Automates Mahogany Homes contracts",
+        "tags": [
+            "mahogany",
+            "homes",
+            "construction",
+            "contract",
+            "minigame",
+            "s1d",
+            "see1duck",
+            "cupidbot"
+        ],
+        "version": "0.0.11",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "See1Duck"
+        ],
+        "iconUrl": "MahoganyHomesPlugin/assets/icon.png",
+        "cardUrl": "MahoganyHomesPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "c8d11c1f1ff15112a9ba5253083efeff8acbd8f1bef73e9ddc832aa9f38ded78",
+        "url": "MahoganyHomesPlugin.jar"
+    },
+    {
+        "internalName": "TanLeatherPlugin",
+        "name": "Lunar Tanner",
+        "description": "Tans hides on the lunar spellbook",
+        "tags": [
+            "magic",
+            "moneymaking"
+        ],
+        "version": "1.0.0",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "4a744556781db69116e4c2b9af3ec0f8538f322130141d03aba4d3f53806a508",
+        "url": "TanLeatherPlugin.jar"
+    },
+    {
+        "internalName": "PlayerMonitorPlugin",
+        "name": "Player Monitor",
+        "description": "Monitors nearby players and executes emergency actions when detected.",
+        "tags": [
+            "wilderness",
+            "skilling",
+            "solo",
+            "pvp",
+            "Netoxic"
+        ],
+        "version": "1.0.4",
+        "minClientVersion": "2.0.0",
+        "authors": [
+            "eXioStorm",
+            "Netoxic"
+        ],
+        "iconUrl": "PlayerMonitorPlugin/assets/icon.png",
+        "cardUrl": "PlayerMonitorPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "d2002713fae90ecfb3fea714304f3b06868995f0055aa97864edca84b22138c9",
+        "url": "PlayerMonitorPlugin.jar"
+    },
+    {
+        "internalName": "MWintertodtPlugin",
+        "name": "Wintertodt",
+        "description": "Wintertodt Minigame Bot",
+        "tags": [
+            "Wintertodt",
+            "cupidbot",
+            "firemaking",
+            "minigame"
+        ],
+        "version": "1.4.8",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "Mocrosoft"
+        ],
+        "iconUrl": "MWintertodtPlugin/assets/icon.jpg",
+        "cardUrl": "MWintertodtPlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "50a93553b1f35d68728d5f1c78a2c9ca3d930c3b72870f3da788c8976f1578b1",
+        "url": "MWintertodtPlugin.jar"
+    },
+    {
+        "internalName": "AutoCookingPlugin",
+        "name": "Auto Cooking",
+        "description": "CupidBot cooking plugin",
+        "tags": [
+            "cooking",
+            "cupidbot",
+            "skilling"
+        ],
+        "version": "1.1.5",
+        "minClientVersion": "2.0.8",
+        "authors": [
+            "George"
+        ],
+        "iconUrl": "AutoCookingPlugin/assets/icon.jpg",
+        "cardUrl": "AutoCookingPlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "20862ce3f132a6c2d030a6529d56f971180646c1c11aa127662fe843d7f48b2e",
+        "url": "AutoCookingPlugin.jar"
+    },
+    {
+        "internalName": "WinePlugin",
+        "name": "Wine Maker",
+        "description": "Nate's Wine Maker",
+        "tags": [
+            "skilling",
+            "nate",
+            "wine",
+            "cooking"
+        ],
+        "version": "1.1.1",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "Nate"
+        ],
+        "iconUrl": "WinePlugin/assets/icon.png",
+        "cardUrl": "WinePlugin/assets/card.png",
+        "disable": false,
+        "sha256": "6c186e924a99a8e046a3bef8ad0c0fad556c63ab8f0915784097e9ea78fd3f82",
+        "url": "WinePlugin.jar"
+    },
+    {
+        "internalName": "VarrockCleanerPlugin",
+        "name": "Museum Cleaner",
+        "description": "Varrock Museum Cleaner",
+        "tags": [
+            "varrock",
+            "museum",
+            "cleaner"
+        ],
+        "version": "1.0.6",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "5fbd60f38ded37ab1079955ca8952f02d1b3adc5365d7568b68d2a30efbe64d9",
+        "url": "VarrockCleanerPlugin.jar"
+    },
+    {
+        "internalName": "BaggedPlantsPlugin",
+        "name": "Bagged Plants",
+        "description": "Cranny's Bagged Plant Planter",
+        "tags": [
+            "skilling",
+            "construction",
+            "farming"
+        ],
+        "version": "1.0.1",
+        "minClientVersion": "1.9.8",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "BaggedPlantsPlugin/assets/icon.png",
+        "cardUrl": "BaggedPlantsPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "e1a6a902dfe02bcdd4406048dc014e81f207a1e39c7d87816b958319c01b69e0",
+        "url": "BaggedPlantsPlugin.jar"
+    },
+    {
+        "internalName": "PieBakerPlugin",
+        "name": "Pie Baker",
+        "description": "Automatically bakes pies using the Lunar spellbook",
+        "tags": [
+            "pie",
+            "baking",
+            "cooking",
+            "magic"
+        ],
+        "version": "1.0.0",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "dec7c479703b644a0a509f514bc42d245afc5373cd2778039e1ef212c77932a1",
+        "url": "PieBakerPlugin.jar"
+    },
+    {
+        "internalName": "LeaguesFiremakingPlugin",
+        "name": "AI Firemaking",
+        "description": "Lights fires in lines anywhere \u2014 withdraws logs, scans for open tiles, adapts around obstacles",
+        "tags": [
+            "firemaking",
+            "leagues",
+            "cupidbot",
+            "skilling"
+        ],
+        "version": "1.0.0",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "99bf7c4ab629741c8f2639a91cfbe2b2aaa1cb518cc284f3d0a1cf3130678de7",
+        "url": "LeaguesFiremakingPlugin.jar"
+    },
+    {
+        "internalName": "TowerOfLifeCCPlugin",
+        "name": " Creature Creation",
+        "description": "Automates the creature creation process within the Tower of Life basement.",
+        "tags": [
+            "Tower of life",
+            "creature",
+            "creature creation",
+            "creation",
+            "tol",
+            "cc",
+            "cd",
+            "cardew"
+        ],
+        "version": "1.1.4",
+        "minClientVersion": "1.9.8",
+        "authors": [
+            "Cardew"
+        ],
+        "iconUrl": "TowerOfLifeCCPlugin/assets/icon.png",
+        "cardUrl": "TowerOfLifeCCPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "431cc3cef064fdb8606467d57c22c879b806316a231d8c99e9ed44103ea1e68f",
+        "url": "TowerOfLifeCCPlugin.jar"
+    },
+    {
+        "internalName": "CalcifiedRockMinerPlugin",
+        "name": "Calcified Rock Miner",
+        "description": "Calcified Rock Miner",
+        "tags": [
+            "prayer",
+            "rock",
+            "calcified",
+            "taf",
+            "cupidbot"
+        ],
+        "version": "1.1.4",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "aaf2243abb0c1ca7680b7472b94fc7ed807f31c1703a192bec0734e5f76b2936",
+        "url": "CalcifiedRockMinerPlugin.jar"
+    },
+    {
+        "internalName": "BankTabSorterPlugin",
+        "name": "Bank Tab Sorter",
+        "description": "Sorts the current bank tab  using an advanced heuristic algorithm",
+        "tags": [
+            "bank",
+            "sort",
+            "cupidbot",
+            "tab"
+        ],
+        "version": "1.0.0",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "unknown"
+        ],
+        "iconUrl": "BanksShopperPlugin/assets/icon.png",
+        "cardUrl": "BanksShopperPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "6f11c25abf9d161218f79a0eaced188945e8af7f2f3ff6a28b5043870301d36d",
+        "url": "BankTabSorterPlugin.jar"
+    },
+    {
+        "internalName": "MageTrainingArenaPlugin",
+        "name": "MTA",
+        "description": "Automates the Mage Training Arena minigame",
+        "tags": [
+            "mage",
+            "training",
+            "arena",
+            "mta",
+            "magic",
+            "minigame",
+            "cupidbot"
+        ],
+        "version": "1.1.8",
+        "minClientVersion": "1.9.6",
+        "authors": [
+            "Basche"
+        ],
+        "iconUrl": "MageTrainingArenaPlugin/assets/icon.png",
+        "cardUrl": "MageTrainingArenaPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "790a2f1dc669df14dec0e5e8884a05fa506529b18c4bfd58823ad95ccddd09dd",
+        "url": "MageTrainingArenaPlugin.jar"
+    },
+    {
+        "internalName": "GabulhasGlassMakePlugin",
+        "name": "Glass Make",
+        "description": "",
+        "tags": [
+            "GabulhasGlassMake",
+            "Gabulhas"
+        ],
+        "version": "1.0.1",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "d4ec1cb47183749c420e41dcae8f043b6f534cdd7bad1e8c41dfb22da5412010",
+        "url": "GabulhasGlassMakePlugin.jar"
+    },
+    {
+        "internalName": "BarbarianFishingPlugin",
+        "name": " Barbarian Fisher",
+        "description": "Barbarian Fishing plugin",
+        "tags": [
+            "Fishing",
+            "barbarian",
+            "skilling"
+        ],
+        "version": "1.1.0",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "See1Duck"
+        ],
+        "iconUrl": "BarbarianFishingPlugin/assets/icon.jpg",
+        "cardUrl": "BarbarianFishingPlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "115bafe7ccf2ce628b1bd26e7f64cbf6274ba0f0b102c12306c402ff1f25e382",
+        "url": "BarbarianFishingPlugin.jar"
+    },
+    {
+        "internalName": "BarrowsPlugin",
+        "name": "Barrows",
+        "description": "Completes the Barrows Brothers mini-game",
+        "tags": [
+            "combat",
+            "mm",
+            "barrows"
+        ],
+        "version": "2.0.9",
+        "minClientVersion": "2.1.0",
+        "authors": [
+            "Gage"
+        ],
+        "iconUrl": "BarrowsPlugin/assets/icon.png",
+        "cardUrl": "BarrowsPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "3124a58f4abb7e162b354dbec1cce9401f5f8a034e1be5031bbef4bde9b847d8",
+        "url": "BarrowsPlugin.jar"
+    },
+    {
+        "internalName": "SalamanderPlugin",
+        "name": "Salamanders",
+        "description": "Automates salamander hunting",
+        "tags": [
+            "hunter",
+            "salamanders",
+            "skilling"
+        ],
+        "version": "1.0.0",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "f6582ae5511c0de46e5398307b928b49da7da39a7127fcf482572b5d6840d642",
+        "url": "SalamanderPlugin.jar"
+    },
+    {
+        "internalName": "LunarTabletsPlugin",
+        "name": "Lunar Tablets",
+        "description": "Creates lunar tablets at the lunar lectern",
+        "tags": [
+            "mm",
+            "magic",
+            "lunar tablets"
+        ],
+        "version": "2.0.2",
+        "minClientVersion": "1.9.8",
+        "authors": [
+            "Gage"
+        ],
+        "iconUrl": "LunarTabletsPlugin/assets/icon.png",
+        "cardUrl": "LunarTabletsPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "49adbb229cab8a725eb56a0799734279e325852260a74b15e3245a25231181d2",
+        "url": "LunarTabletsPlugin.jar"
+    },
+    {
+        "internalName": "GECookerPlugin",
+        "name": "GE Cooker",
+        "description": "Cooks items on fires found at the Grand Exchange.",
+        "tags": [
+            "cooking",
+            "grand",
+            "exchange",
+            "ge",
+            "fish",
+            "raw"
+        ],
+        "version": "1.0.1",
+        "minClientVersion": "1.9.6",
+        "authors": [
+            "StickToTheScript"
+        ],
+        "iconUrl": "GECookerPlugin/assets/cooking.png",
+        "cardUrl": "GECookerPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "94c308d7a2c5c5756fb04fcb930df29f02bd23e8fca9c76036e3132441efeb42",
+        "url": "GECookerPlugin.jar"
+    },
+    {
+        "internalName": "AutoBankStanderPlugin",
+        "name": "Bank Stander",
+        "description": "AIO bank standing plugin for various processing activities",
+        "tags": [
+            "magic",
+            "skilling",
+            "processing"
+        ],
+        "version": "1.0.3",
+        "minClientVersion": "1.9.8",
+        "authors": [
+            "Unknown"
+        ],
+        "iconUrl": "AutoBankStanderPlugin/assets/icon.png",
+        "cardUrl": "AutoBankStanderPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "919b982f173b58e700ded49a066172abba4ce791a28483a423c5a18772edc6a9",
+        "url": "AutoBankStanderPlugin.jar"
+    },
+    {
+        "internalName": "ArrowPlugin",
+        "name": "Arrow Maker",
+        "description": "Nate's Arrow Maker",
+        "tags": [
+            "MoneyMaking",
+            "nate",
+            "Arrow"
+        ],
+        "version": "1.0.1",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "Nate"
+        ],
+        "iconUrl": "ArrowPlugin/assets/icon.png",
+        "cardUrl": "ArrowPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "07392cc135a0da532440b074e77ececb74ac4cb04d77e8fefa907ec176448952",
+        "url": "ArrowPlugin.jar"
+    },
+    {
+        "internalName": "ArceuusLibraryPlugin",
+        "name": "Arceuus Library",
+        "description": "Runs the Arceuus Library book-fetch loop using the upstream Kourend Library solver",
+        "tags": [
+            "arceuus",
+            "library",
+            "kourend",
+            "magic",
+            "runecraft",
+            "minigame"
+        ],
+        "version": "1.0.0",
+        "minClientVersion": "2.1.34",
+        "authors": [
+            "runsonmypc"
+        ],
+        "iconUrl": "ArceuusLibraryPlugin/assets/card.jpg",
+        "cardUrl": "ArceuusLibraryPlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "6ddbf76c793327789ad3753d2c6dd43dedfe9684057414a779b01b9c2f389dc3",
+        "url": "ArceuusLibraryPlugin.jar"
+    },
+    {
+        "internalName": "VarrockAnvilPlugin",
+        "name": "Varrock Anvil",
+        "description": "Smith items at the anvils in Varrock West.",
+        "tags": [
+            "smithing",
+            "varrock",
+            "anvil"
+        ],
+        "version": "1.0.3",
+        "minClientVersion": "1.9.6",
+        "authors": [
+            "StickToTheScript"
+        ],
+        "iconUrl": "VarrockAnvilPlugin/assets/icon.png",
+        "cardUrl": "VarrockAnvilPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "4aaabc6b7c07da40ad682b16d5ec336db6ef25b73aa2112b305ca263bc1cf79d",
+        "url": "VarrockAnvilPlugin.jar"
+    },
+    {
+        "internalName": "MixologyPlugin",
+        "name": "Mixology",
+        "description": "Mixology plugin",
+        "tags": [
+            "herblore",
+            "cupidbot",
+            "mixology"
+        ],
+        "version": "1.0.4",
+        "minClientVersion": "1.9.9.1",
+        "authors": [
+            "Mocrosoft"
+        ],
+        "iconUrl": "MixologyPlugin/assets/icon.png",
+        "cardUrl": "MixologyPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "f48fb5dcb92d6c81f9f864a90b4eb48752133a7ac6486d7b4a19d668054d1973",
+        "url": "MixologyPlugin.jar"
+    },
+    {
+        "internalName": "ExamplePlugin",
+        "name": "Example",
+        "description": "CupidBot Example Plugin",
+        "tags": [
+            "example"
+        ],
+        "version": "1.1.1",
+        "minClientVersion": "1.9.8",
+        "authors": [
+            "Mocrosoft"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": true,
+        "sha256": "18d11da5a92b1fde57c5381fa256cb9b1790803f9cc6ddb2f967383e2bb03d35",
+        "url": "ExamplePlugin.jar"
+    },
+    {
+        "internalName": "AutoSmeltingPlugin",
+        "name": "Auto Smelting",
+        "description": "Smelt ores/coal into bars",
+        "tags": [
+            "smithing",
+            "smelting",
+            "cupidbot",
+            "skilling"
+        ],
+        "version": "1.0.4",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "9998a022833634581ee815a6234911bf2fdd2f1ec17b6d64c216ba649da036a3",
+        "url": "AutoSmeltingPlugin.jar"
+    },
+    {
+        "internalName": "DriftNetPlugin",
+        "name": "Drifnet",
+        "description": "CupidBot drifnet plugin",
+        "tags": [
+            "fishing",
+            "cupidbot",
+            "hunter",
+            "drift",
+            "net"
+        ],
+        "version": "1.0.1",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "Mocrosoft"
+        ],
+        "iconUrl": "DriftNetPlugin/assets/icon.jpg",
+        "cardUrl": "DriftNetPlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "552d9420fad1c0ce6577a1297ee98e0b1ee875c9955152a9a87bbdccb4c4f1a7",
+        "url": "DriftNetPlugin.jar"
+    },
+    {
+        "internalName": "EnsouledHeadSlayerPlugin",
+        "name": "Ensouled Heads",
+        "description": "EnsouledHeadSlayer",
+        "tags": [
+            "Ensould",
+            "head",
+            "slayer",
+            "prayer",
+            "taf",
+            "cupidbot"
+        ],
+        "version": "1.0.2",
+        "minClientVersion": "2.1.0",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "e6c5b5fc02353afebd0e269cfc7be565d7466466b0d31293b1daddc7eff17ab5",
+        "url": "EnsouledHeadSlayerPlugin.jar"
+    },
+    {
+        "internalName": "AutoLooterPlugin",
+        "name": "Auto Looter",
+        "description": "CupidBot looter plugin",
+        "tags": [
+            "looter",
+            "cupidbot"
+        ],
+        "version": "1.2.0",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "7b43d18a3072977c5a80f7af9edd5c1c8bb0da5343728dd22a0c0799db5e1e32",
+        "url": "AutoLooterPlugin.jar"
+    },
+    {
+        "internalName": "TitheFarmingPlugin",
+        "name": "Tithe Farm",
+        "description": "Plays the Tithe farm minigame for you!",
+        "tags": [
+            "tithe farming",
+            "cupidbot",
+            "skills",
+            "minigame"
+        ],
+        "version": "1.1.13",
+        "minClientVersion": "1.9.8.8",
+        "authors": [
+            "Mocrosoft"
+        ],
+        "iconUrl": "TitheFarmingPlugin/assets/icon.png",
+        "cardUrl": "TitheFarmingPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "c6ab9d840ccd9e79f53465a6fc39fa10618055acdca429a70ddd35d619c79902",
+        "url": "TitheFarmingPlugin.jar"
+    },
+    {
+        "internalName": "EventDismissPlugin",
+        "name": "Random Event Handler",
+        "description": "Dismisses random events and optionally accepts lamps from Genie/Count Check",
+        "tags": [
+            "random",
+            "events",
+            "cupidbot",
+            "lamp",
+            "genie"
+        ],
+        "version": "2.1.1",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "Unknown"
+        ],
+        "iconUrl": "EventDismissPlugin/assets/icon.jpg",
+        "cardUrl": "EventDismissPlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "ace035594e5986bfc5ef2fb55293e8fdbb7077724c12aa4a5a0decc025ed6957",
+        "url": "EventDismissPlugin.jar"
+    },
+    {
+        "internalName": "MotherloadMinePlugin",
+        "name": "MotherlodeMine",
+        "description": "A bot that mines paydirt in the motherlode mine",
+        "tags": [
+            "paydirt",
+            "mine",
+            "motherlode",
+            "mlm"
+        ],
+        "version": "1.9.7",
+        "minClientVersion": "1.9.8",
+        "authors": [
+            "Mocrosoft"
+        ],
+        "iconUrl": "MotherloadMinePlugin/assets/icon.png",
+        "cardUrl": "MotherloadMinePlugin/assets/card.png",
+        "disable": false,
+        "sha256": "86f5ee6330e0e66696c4b418aab17b837dfd9cf5c441e732bff81d4aaf5c016e",
+        "url": "MotherloadMinePlugin.jar"
+    },
+    {
+        "internalName": "ThievingPlugin",
+        "name": "Thieving",
+        "description": "CupidBot thieving plugin",
+        "tags": [
+            "thieving",
+            "skilling"
+        ],
+        "version": "2.1.0",
+        "minClientVersion": "1.9.8.2",
+        "authors": [
+            "Mocrosoft",
+            "Kryox",
+            "Jesusfh"
+        ],
+        "iconUrl": "ThievingPlugin/assets/icon.png",
+        "cardUrl": "ThievingPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "2bb077bf458f5a43ce8a26a9bc99e475f200566b7d5048bdafcbd5324f3e4415",
+        "url": "ThievingPlugin.jar"
+    },
+    {
+        "internalName": "BlastoiseFurnacePlugin",
+        "name": "BlastoiseFurnace",
+        "description": "Storm's BlastoiseFurnace plugin",
+        "tags": [
+            "cupidbot",
+            "smithing",
+            "bar",
+            "ore",
+            "blast",
+            "furnace"
+        ],
+        "version": "1.2.2",
+        "minClientVersion": "2.1.0",
+        "authors": [
+            "Storm"
+        ],
+        "iconUrl": "BlastoiseFurnacePlugin/assets/icon.jpg",
+        "cardUrl": "BlastoiseFurnacePlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "778e3433ca47049fa81eb2890848ee5c02bafb5ea017f7950fa0d74f69f5f1cd",
+        "url": "BlastoiseFurnacePlugin.jar"
+    },
+    {
+        "internalName": "WildernessAgilityPlugin",
+        "name": "Wilderness Agility",
+        "description": "Automated wilderness agility training with banking and ticket collection",
+        "tags": [
+            "agility",
+            "skilling",
+            "solo",
+            "mass",
+            "MoneyMaking"
+        ],
+        "version": "1.6.0",
+        "minClientVersion": "2.0.21",
+        "authors": [
+            "Cranny"
+        ],
+        "iconUrl": "WildernessAgilityPlugin/assets/icon.png",
+        "cardUrl": "httpa://chsami.github.io/CupidBot-Hub/WildernessAgilityPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "a1a61cc8cb39b3fdd1626497fccbcfbd4ad2ed50abd02f1e667bfe11235e720b",
+        "url": "WildernessAgilityPlugin.jar"
+    },
+    {
+        "internalName": "AutoMiningPlugin",
+        "name": "Auto Mining",
+        "description": "Mines and banks ores",
+        "tags": [
+            "mining",
+            "cupidbot",
+            "skilling"
+        ],
+        "version": "1.0.20",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "6e380bd3ff88f9bc081aed281dbf78ff373c9ec6d74a2afe81aad8a28b56b2a1",
+        "url": "AutoMiningPlugin.jar"
+    },
+    {
+        "internalName": "npcTannerPlugin",
+        "name": "NPC Tanner",
+        "description": "Tans any hide in the bank at Al-Kharid",
+        "tags": [
+            "mm",
+            "tanning",
+            "npc tanner"
+        ],
+        "version": "2.0.2",
+        "minClientVersion": "1.9.8",
+        "authors": [
+            "Gage"
+        ],
+        "iconUrl": "npcTannerPlugin/assets/icon.png",
+        "cardUrl": "npcTannerPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "7a8a19535366e12b025ccf696d49518e4688ce106dd03f367b8a9187b28997c0",
+        "url": "npcTannerPlugin.jar"
+    },
+    {
+        "internalName": "ValeTotemPlugin",
+        "name": "Vale Totems",
+        "description": "Automated Vale Totems minigame bot with advanced optimizations",
+        "tags": [
+            "valetotems",
+            "fletching",
+            "minigame"
+        ],
+        "version": "1.0.10",
+        "minClientVersion": "1.9.7",
+        "authors": [
+            "Make"
+        ],
+        "iconUrl": "ValeTotemPlugin/assets/card.png",
+        "cardUrl": "ValeTotemPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "0f50f5fa07e0d1043e951d347bc52ca79fd234eed874ef589f60a2825c8f065f",
+        "url": "ValeTotemPlugin.jar"
+    },
+    {
+        "internalName": "DailyTasksPlugin",
+        "name": "Daily Tasks",
+        "description": "CupidBot daily tasks plugin",
+        "tags": [
+            "misc"
+        ],
+        "version": "1.1.0",
+        "minClientVersion": "2.1.0",
+        "authors": [
+            "Unknown"
+        ],
+        "iconUrl": "DailyTasksPlugin/assets/icon.jpg",
+        "cardUrl": "DailyTasksPlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "eaf0520a9e19db8e4f19c6268beb901b2062e7d32a6a6b2fd5c64cef6cc20681",
+        "url": "DailyTasksPlugin.jar"
+    },
+    {
+        "internalName": "LeftClickCastPlugin",
+        "name": "Left-Click Cast",
+        "description": "Replaces left-click Attack on NPCs with a preconfigured Cast Spell action.",
+        "tags": [
+            "magic",
+            "combat",
+            "spell",
+            "left-click",
+            "cast",
+            "pvm",
+            "pvp"
+        ],
+        "version": "1.3.2",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Pert"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "1da61fee820ad0516cb1bd63fd7873c8a5e0542032021869b480bb9d55554151",
+        "url": "LeftClickCastPlugin.jar"
+    },
+    {
+        "internalName": "HunterKebbitsPlugin",
+        "name": "Kebbits",
+        "description": "Automates Kebbits hunting",
+        "tags": [
+            "hunter",
+            "kebbits",
+            "skilling"
+        ],
+        "version": "1.1.1",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "c5fbfa280cab15974754632a0e2938449b95b10eeed0b84d494597e37d838e2e",
+        "url": "HunterKebbitsPlugin.jar"
+    },
+    {
+        "internalName": "DiscordPlugin",
+        "name": "Discord Notifier",
+        "description": "Sends notifications to Discord",
+        "tags": [
+            "discord",
+            "notification",
+            "messages"
+        ],
+        "version": "1.0.3",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "Unknown"
+        ],
+        "iconUrl": "DiscordPlugin/assets/icon.jpg",
+        "cardUrl": "DiscordPlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "28d6f67e9c73568fe2db5bb3a8503fe8d002b30198cf1e2eeb59167b9cb7605f",
+        "url": "DiscordPlugin.jar"
+    },
+    {
+        "internalName": "MKE_WintertodtPlugin",
+        "name": " AI-Wintertodt",
+        "description": "Advanced Wintertodt bot with human-like behavior",
+        "tags": [
+            "Wintertodt",
+            "firemaking",
+            "minigame"
+        ],
+        "version": "2.2.1",
+        "minClientVersion": "1.9.7",
+        "authors": [
+            "Make"
+        ],
+        "iconUrl": "MKE_WintertodtPlugin/assets/card.png",
+        "cardUrl": "MKE_WintertodtPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "3f178d2f3708811041d6201c5f5aadf680ebb6c6b1796600e29b03a526cbd412",
+        "url": "MKE_WintertodtPlugin.jar"
+    },
+    {
+        "internalName": "ShootingStarPlugin",
+        "name": "ShootingStar",
+        "description": "Finds & Travels to shooting stars",
+        "tags": [
+            "mining",
+            "skilling",
+            "star",
+            "shooting"
+        ],
+        "version": "1.4.7",
+        "minClientVersion": "1.9.8",
+        "authors": [
+            "g-mason0"
+        ],
+        "iconUrl": "ShootingStarPlugin/assets/icon.png",
+        "cardUrl": "ShootingStarPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "53029af925d28536ebac734125f40ec431b960f659ce896729f008ac887b11d0",
+        "url": "ShootingStarPlugin.jar"
+    },
+    {
+        "internalName": "HerbiboarPlugin",
+        "name": "Herbiboar",
+        "description": "Automatically hunts herbiboars with trail tracking and banking support",
+        "tags": [
+            "skilling",
+            "hunter",
+            "herbiboar"
+        ],
+        "version": "1.2.5",
+        "minClientVersion": "1.9.8",
+        "authors": [
+            "AI Agent"
+        ],
+        "iconUrl": "HerbiboarPlugin/assets/icon.png",
+        "cardUrl": "HerbiboarPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "6b924bd3b439fb15a0232ed04ca5dddaf77fa45306422224287dd9df18e91d1f",
+        "url": "HerbiboarPlugin.jar"
+    },
+    {
+        "internalName": "VorkathPlugin",
+        "name": "Vorkath",
+        "description": "CupidBot Vorkath plugin",
+        "tags": [
+            "vorkath",
+            "cupidbot"
+        ],
+        "version": "1.3.14",
+        "minClientVersion": "1.9.9.1",
+        "authors": [
+            "Mocrosoft"
+        ],
+        "iconUrl": "VorkathPlugin/assets/icon.png",
+        "cardUrl": "VorkathPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "7b4da853391c9931c6466e553c3831e6ce80ca86ff01c750b375e53046b511c5",
+        "url": "VorkathPlugin.jar"
+    },
+    {
+        "internalName": "AutoWoodcuttingPlugin",
+        "name": "Auto Woodcutting",
+        "description": "CupidBot woodcutting plugin",
+        "tags": [
+            "Woodcutting",
+            "cupidbot",
+            "skilling"
+        ],
+        "version": "1.8.3",
+        "minClientVersion": "2.1.32",
+        "authors": [
+            "Mocrosoft"
+        ],
+        "iconUrl": "AutoWoodcuttingPlugin/assets/icon.jpg",
+        "cardUrl": "AutoWoodcuttingPlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "1b0b60d3f2dd9acefdc4fde83bae35d69e394e059592b3056d46f25d9a3cca77",
+        "url": "AutoWoodcuttingPlugin.jar"
+    },
+    {
+        "internalName": "GauntletHelperPlugin",
+        "name": "Gauntlet Helper",
+        "description": "Gauntlet Helper",
+        "tags": [
+            "Jam",
+            "cg",
+            "Gauntlet",
+            "hunllef",
+            "pvm",
+            "prayer",
+            "money making",
+            "auto",
+            "boss"
+        ],
+        "version": "1.1",
+        "minClientVersion": "2.0.30",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "5ce635dc2c4fbf3a3f4ceac6090bc08b8d99e2fa691e8ba3a52e0b608b50cc9d",
+        "url": "GauntletHelperPlugin.jar"
+    },
+    {
+        "internalName": "OuraniaPlugin",
+        "name": "Ourania Altar",
+        "description": "Craft runes at the Ourania Altar",
+        "tags": [
+            "runecrafting",
+            "skilling",
+            "ourania",
+            "zmi"
+        ],
+        "version": "1.4.4",
+        "minClientVersion": "1.9.8",
+        "authors": [
+            "g-mason0"
+        ],
+        "iconUrl": "OuraniaPlugin/assets/icon.png",
+        "cardUrl": "OuraniaPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "50a2ea27b488ce495a74141e29cdc5e9db08daea9e0465a87f9c132a6fa0f67f",
+        "url": "OuraniaPlugin.jar"
+    },
+    {
+        "internalName": "StallThievingPlugin",
+        "name": "Stall Thieving",
+        "description": "Stall Thieving",
+        "tags": [
+            "thieving",
+            "cupidbot"
+        ],
+        "version": "1.0.0",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "070a0ea3ce974eb0dfe1d4643e438a20da2b2159684d44924caf7dd0c0c2013f",
+        "url": "StallThievingPlugin.jar"
+    },
+    {
+        "internalName": "GabulhasKarambwansPlugin",
+        "name": "Karambwan fisher",
+        "description": "",
+        "tags": [
+            "GabulhasKarambwans",
+            "Gabulhas"
+        ],
+        "version": "1.2.1",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "700bd15ed154149aba1d2ee1811ab67bcd6492a8b360c10c4d99fc44128a34a2",
+        "url": "GabulhasKarambwansPlugin.jar"
+    },
+    {
+        "internalName": "AstralRunesPlugin",
+        "name": "Astral Runes",
+        "description": "Astral Runes",
+        "tags": [
+            "astral",
+            "rune",
+            "cupidbot"
+        ],
+        "version": "1.0.3",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "Maxxin"
+        ],
+        "iconUrl": "AstralRunesPlugin/assets/icon.png",
+        "cardUrl": "AstralRunesPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "cd36c6a99b7c1ebd0a4edadaaeb2f747c4e66ff14327b9565a614398f42c4506",
+        "url": "AstralRunesPlugin.jar"
+    },
+    {
+        "internalName": "HouseTabPlugin",
+        "name": "HouseTab",
+        "description": "CupidBot HouseTab plugin",
+        "tags": [
+            "cupidbot",
+            "magic",
+            "moneymaking"
+        ],
+        "version": "1.0.9",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "79e6c4ec8f4ff3a2707561aecfde491571eea19c5bebae05821607187be7c17a",
+        "url": "HouseTabPlugin.jar"
+    },
+    {
+        "internalName": "GemCrabKillerPlugin",
+        "name": "Gem Crab Killer",
+        "description": "Automatically kills the Gem Crab boss",
+        "tags": [
+            "TaF",
+            "crab",
+            "combat",
+            "training",
+            "gem"
+        ],
+        "version": "1.0.2",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "TaF"
+        ],
+        "iconUrl": "GemCrabKillerPlugin/assets/GemStoneCrab.png",
+        "cardUrl": "GemCrabKillerPlugin/assets/GemStoneCrab.png",
+        "disable": false,
+        "sha256": "1b0908d960b7f4ce7923d833656471dadff5a1ab0fe95355b0622bda5569b62d",
+        "url": "GemCrabKillerPlugin.jar"
+    },
+    {
+        "internalName": "BonesToBananasPlugin",
+        "name": "Bones to Bananas",
+        "description": "Casts Bones to Bananas, using staves to save runes.",
+        "tags": [
+            "magic",
+            "skilling",
+            "bones",
+            "bananas",
+            "cupidbot"
+        ],
+        "version": "1.0.1",
+        "minClientVersion": "1.9.8",
+        "authors": [
+            "Lumusi"
+        ],
+        "iconUrl": "BonesToBananasPlugin/assets/icon.png",
+        "cardUrl": "BonesToBananasPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "49199186d363d852105c37acdc761fe7a89d5bfa4d5b2df5653fe022ead136d2",
+        "url": "BonesToBananasPlugin.jar"
+    },
+    {
+        "internalName": "OrbChargerPlugin",
+        "name": "Orb Charger",
+        "description": "CupidBot Orb Charger Plugin",
+        "tags": [
+            "magic",
+            "cupidbot",
+            "money",
+            "money making"
+        ],
+        "version": "1.1.1",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "f687868c3470fc3db1146de26f32901e8c8be27d3ac77c0111a0da6b867bf266",
+        "url": "OrbChargerPlugin.jar"
+    },
+    {
+        "internalName": "MoonsOfPerilPlugin",
+        "name": "Moons of Peril",
+        "description": "A plugin to farm the Moons of Peril",
+        "tags": [
+            "bossing",
+            "pvm",
+            "moneymaking",
+            "combat",
+            "cupidbot"
+        ],
+        "version": "1.0.4",
+        "minClientVersion": "2.0.14",
+        "authors": [
+            "The Funk"
+        ],
+        "iconUrl": "MoonsOfPerilPlugin/assets/icon.png",
+        "cardUrl": "MoonsOfPerilPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "376eda0c54f85df90c464cc72337a0c6ad7507cb7143c2559dc1ce2e4080b154",
+        "url": "MoonsOfPerilPlugin.jar"
+    },
+    {
+        "internalName": "FornBirdhouseRunsPlugin",
+        "name": "Birdhouse Runner",
+        "description": "Does a birdhouse run",
+        "tags": [
+            "FornBirdhouseRuns",
+            "forn"
+        ],
+        "version": "1.1.4",
+        "minClientVersion": "2.1.0",
+        "authors": [
+            "Forn"
+        ],
+        "iconUrl": "FornBirdhouseRunsPlugin/assets/icon.jpg",
+        "cardUrl": "FornBirdhouseRunsPlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "e3364ee972defc97122979a012951b9196fcf1e61c3e50c93c6026b3ceb48e5d",
+        "url": "FornBirdhouseRunsPlugin.jar"
+    },
+    {
+        "internalName": "FishingTrawlerPlugin",
+        "name": "Fishing Trawler",
+        "description": "Chops Tentacles in fishing trawler minigame. start the script either on the dock outside the minigame or on the upstairs ship level where the tentacles spawn. make sure you have an axe on you",
+        "tags": [
+            "fishing",
+            "fishing trawler",
+            "cupidbot"
+        ],
+        "version": "1.0.1",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "Unknown"
+        ],
+        "iconUrl": "FishingTrawlerPlugin/assets/icon.jpg",
+        "cardUrl": "FishingTrawlerPlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "8e095b93554208594c620e8bfa49bad4e4c4546e0e2d7dba3248a769f7a4cae5",
+        "url": "FishingTrawlerPlugin.jar"
+    },
+    {
+        "internalName": "BlessedWinePlugin",
+        "name": "Blessed Wine",
+        "description": "Automating Prayer Training using blessed wines at Cam Torum",
+        "tags": [
+            "blessed",
+            "wine",
+            "ralos",
+            "prayer",
+            "libation"
+        ],
+        "version": "1.1.0",
+        "minClientVersion": "2.1.0",
+        "authors": [
+            "Hal"
+        ],
+        "iconUrl": "BlessedWinePlugin/assets/icon.jpg",
+        "cardUrl": "BlessedWinePlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "6e950b20f23df5f9710d17daa62eb2464b030d4a1f5ce77e17752682ddf7d01d",
+        "url": "BlessedWinePlugin.jar"
+    },
+    {
+        "internalName": "MoonlightMothPlugin",
+        "name": "MoonlightMoth",
+        "description": "Moonlight moth catcher",
+        "tags": [
+            "moonlight",
+            "moth",
+            "catcher",
+            "cupidbot",
+            "prayer"
+        ],
+        "version": "1.0.0",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "34c8cb38dd531ba409c8d54f0ba52903f4f2c25364f78722a6daf372b577ed10",
+        "url": "MoonlightMothPlugin.jar"
+    },
+    {
+        "internalName": "SummerGardenPlugin",
+        "name": "Summers Garden",
+        "description": " CupidBot Summers Garden (V2.1)",
+        "tags": [
+            "Summers Garden",
+            "minigame",
+            "thieving",
+            "cupidbot",
+            "skilling",
+            "summer",
+            "summers",
+            "garden",
+            "sq'irk",
+            "juice"
+        ],
+        "version": "1.0.3",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "d91c9135a801ad6f5200bf99ce50d021a5cc9c8dca1f632cdb8fed58f275a5ed",
+        "url": "SummerGardenPlugin.jar"
+    },
+    {
+        "internalName": "LunarPlankMakePlugin",
+        "name": "Lunar Plank Make",
+        "description": "Geoff's lunar plank maker",
+        "tags": [
+            "magic",
+            "moneymaking"
+        ],
+        "version": "1.0.4",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "1927ce78a58f629a96826a1e83ed4f043f5d64e4aa34c08090cd7774ea646447",
+        "url": "LunarPlankMakePlugin.jar"
+    },
+    {
+        "internalName": "AutoBuyerPlugin",
+        "name": "GE Buyer",
+        "description": "Acun's GE buyer. Give a list of items to buy",
+        "tags": [
+            "buy",
+            "buyer",
+            "grand exchange",
+            "ge"
+        ],
+        "version": "1.0.0",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "Acun"
+        ],
+        "iconUrl": "AutoBuyerPlugin/assets/icon.png",
+        "cardUrl": "AutoBuyerPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "05c8df50fb58ee59c2a58dce20109e7d62a2843977572b75633a619340f1ada5",
+        "url": "AutoBuyerPlugin.jar"
+    },
+    {
+        "internalName": "MmCavesPlugin",
+        "name": "MM Caves",
+        "description": "Automates chinning or bursting in Monkey Madness II caves",
+        "tags": [
+            "mm",
+            "mm2",
+            "caves",
+            "chinning",
+            "bursting",
+            "ranged",
+            "magic"
+        ],
+        "version": "1.0.2",
+        "minClientVersion": "2.0.6",
+        "authors": [
+            "FreakJoost"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "b2b6f03f7014826a475a88a47c941c1de49a4681beb7ad1167d051fb13ef351f",
+        "url": "MmCavesPlugin.jar"
+    },
+    {
+        "internalName": "BirdHunterPlugin",
+        "name": "Bird Hunter",
+        "description": "Hunts birds",
+        "tags": [
+            "hunting",
+            "00",
+            "bird",
+            "skilling"
+        ],
+        "version": "1.0.2",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "b67c8b2ff7782ef970c2700763ae9788ac1aab38b05dbea1c7f6edd0206f82ee",
+        "url": "BirdHunterPlugin.jar"
+    },
+    {
+        "internalName": "ArceuusRcPlugin",
+        "name": "Arceuus RC",
+        "description": "Runecrafting at Arceuus",
+        "tags": [
+            "runecrafting",
+            "blood rune",
+            "soul rune",
+            "arceuus",
+            "cupidbot"
+        ],
+        "version": "1.0.3",
+        "minClientVersion": "1.9.9.1",
+        "authors": [
+            "See1Duck"
+        ],
+        "iconUrl": "ArceuusRcPlugin/assets/icon.png",
+        "cardUrl": "ArceuusRcPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "ee00ae190ad0e2c3ae7ea792d720e05423fbe392c813105da75fb1f4e189a3d2",
+        "url": "ArceuusRcPlugin.jar"
+    },
+    {
+        "internalName": "CraftingPlugin",
+        "name": "Crafting",
+        "description": "CupidBot crafting plugin",
+        "tags": [
+            "skilling",
+            "cupidbot",
+            "crafting"
+        ],
+        "version": "1.0.1",
+        "minClientVersion": "2.0.7",
+        "authors": [
+            "Mocrosoft"
+        ],
+        "iconUrl": "CraftingPlugin/assets/icon.png",
+        "cardUrl": "CraftingPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "105a795c333ab9ece79bed597c157e81be195c93e72022f290f01afc09463508",
+        "url": "CraftingPlugin.jar"
+    },
+    {
+        "internalName": "ZulrahPlugin",
+        "name": "Zulrah Overlay Helper",
+        "description": "Helps with various aspects during a fight with Zulrah",
+        "tags": [
+            "Zulrah",
+            "Helper",
+            "boss",
+            "bossing",
+            "snek",
+            "snake",
+            "tool"
+        ],
+        "version": "1.0.1",
+        "minClientVersion": "2.0.1",
+        "authors": [
+            "Syntax"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "1ea7aa97265ac9e648fa40cf84268cbfa61acbcf41f88505074b66525c198344",
+        "url": "ZulrahPlugin.jar"
+    },
+    {
+        "internalName": "StoneChestThieverPlugin",
+        "name": " Stone Chest Thiever",
+        "description": "A plugin to automate thieving from stone chests in the Lizardman Temple.",
+        "tags": [
+            "TaF",
+            "Thieving",
+            "Stone chests"
+        ],
+        "version": "1.0.0",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "331339b88cdbe6114437fd7fecedd0218ffe6273df5a65f6abb5a7ada1bfdc15",
+        "url": "StoneChestThieverPlugin.jar"
+    },
+    {
+        "internalName": "GildedAltarPlugin",
+        "name": "Gilded Altar",
+        "description": "Gilded Altar plugin",
+        "tags": [
+            "prayer",
+            "cupidbot"
+        ],
+        "version": "1.0.1",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "8f81e133049ee1708bee94f099c067738c239784510bc957a634373b9d59e823",
+        "url": "GildedAltarPlugin.jar"
+    },
+    {
+        "internalName": "CombatHotkeysPlugin",
+        "name": "Combat hotkeys",
+        "description": "A plugin to bind hotkeys to combat stuff",
+        "tags": [
+            "combat",
+            "hotkeys",
+            "cupidbot"
+        ],
+        "version": "1.1.2",
+        "minClientVersion": "2.0.8",
+        "authors": [
+            "Cicire"
+        ],
+        "iconUrl": "CombatHotkeysPlugin/assets/icon.jpg",
+        "cardUrl": "CombatHotkeysPlugin/assets/card.jpg",
+        "disable": false,
+        "sha256": "16ec9ae7e4763eef755c89c3d03ed7926e0d17fefe00d1feb74c675bf93bd8d1",
+        "url": "CombatHotkeysPlugin.jar"
+    },
+    {
+        "internalName": "HueyPrayerPlugin",
+        "name": "Huey Prayer",
+        "description": "Auto prayer vs Hueycoatl (3-style projectile)",
+        "tags": [
+            "cupidbot",
+            "huey",
+            "prayer"
+        ],
+        "version": "1.0.0",
+        "minClientVersion": "2.1.34",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "a9931fc31a6bc20c1a66dba5e5a5c3531ad0aa563f639290f570fe4b193e0bff",
+        "url": "HueyPrayerPlugin.jar"
+    },
+    {
+        "internalName": "GiantMolePlugin",
+        "name": "Giant Mole",
+        "description": "Giant Mole plugin",
+        "tags": [
+            "Giant Mole",
+            "cupidbot"
+        ],
+        "version": "0.0.5",
+        "minClientVersion": "2.0.0",
+        "authors": [
+            "See1Duck"
+        ],
+        "iconUrl": "GiantMolePlugin/assets/icon.png",
+        "cardUrl": "GiantMolePlugin/assets/card.png",
+        "disable": false,
+        "sha256": "1d855532b3c50476379b629f72de7af0b6b126f5dc043d0260ef735a0d011277",
+        "url": "GiantMolePlugin.jar"
+    },
+    {
+        "internalName": "AutoRunecraftPlugin",
+        "name": "Auto Runecrafter",
+        "description": "F2P Auto Runecraft Plugin",
+        "tags": [
+            "Chill",
+            "Runecraft",
+            "rc",
+            "f2p"
+        ],
+        "version": "1.0.1",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "77255a392adc37b760a0adc6a1c8a228a5ffc6a1959a87729d50948ab6ef120a",
+        "url": "AutoRunecraftPlugin.jar"
+    },
+    {
+        "internalName": "FarmingContractPlugin",
+        "name": "Farming Contracts",
+        "description": "Automates Farming Guild contracts. Start the plugin while inside the Farming Guild.",
+        "tags": [
+            "farming",
+            "contract",
+            "guild",
+            "jane"
+        ],
+        "version": "1.0.0",
+        "minClientVersion": "2.6.0",
+        "authors": [
+            "Pert"
+        ],
+        "iconUrl": "FarmingContractPlugin/assets/icon.png",
+        "cardUrl": "FarmingContractPlugin/assets/card.png",
+        "disable": false,
+        "sha256": "446e5640eb322288412fb14830ac9114653760200aec770ed2b45986cd33265f",
+        "url": "FarmingContractPlugin.jar"
+    },
+    {
+        "internalName": "SlayerPlugin",
+        "name": "Slayer",
+        "description": "Automated slayer with banking and travel support",
+        "tags": [
+            "slayer",
+            "combat",
+            "task"
+        ],
+        "version": "1.1.0",
+        "minClientVersion": "2.1.11",
+        "authors": [
+            "Big L"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "79348101b0fe6cef438c217a0030cf3f99fcb24f93f16dc14015ceb7c14fb448",
+        "url": "SlayerPlugin.jar"
+    },
+    {
+        "internalName": "PlankRunnerPlugin",
+        "name": "Plank Runner",
+        "description": "CupidBot plank runner plugin",
+        "tags": [
+            "money making",
+            "cupidbot"
+        ],
+        "version": "1.1.0",
+        "minClientVersion": "2.0.13",
+        "authors": [
+            "Unknown Author"
+        ],
+        "iconUrl": "",
+        "cardUrl": "",
+        "disable": false,
+        "sha256": "2a2a7567d1afd0bf85ad89123ea864751dd4b5240f1aea509701d36d5fd7c2d1",
+        "url": "PlankRunnerPlugin.jar"
+    }
+]
