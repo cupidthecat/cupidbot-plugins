@@ -154,6 +154,10 @@ If a plugin needs additional libraries beyond the CupidBot client:
 - Follow semantic versioning: `MAJOR.MINOR.PATCH`
 - The version is used for local JAR naming and `plugins.json` generation
 
+## Update Log Workflow
+
+After any user-facing plugin, CupidBot client, or launcher update is committed, follow [UPDATE_LOG_POLICY.md](UPDATE_LOG_POLICY.md). The canonical log lives in the sibling launcher repo at `../cupidbot-launcher/UPDATE_LOG.md`, and entries are added in a follow-up log-only commit that references the completed implementation commit SHA.
+
 ## Git Workflow
 
 Based on recent commits:
