@@ -3,6 +3,7 @@ package net.runelite.client.plugins.cupidbot.autofishing;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.*;
+import net.runelite.api.gameval.InterfaceID;
 import net.runelite.api.gameval.ItemID;
 import net.runelite.api.gameval.ObjectID;
 import net.runelite.api.coords.WorldPoint;
@@ -15,6 +16,7 @@ import net.runelite.client.plugins.cupidbot.autofishing.enums.HarpoonType;
 import net.runelite.client.plugins.cupidbot.util.antiban.Rs2Antiban;
 import net.runelite.client.plugins.cupidbot.util.bank.Rs2Bank;
 import net.runelite.client.plugins.cupidbot.util.combat.Rs2Combat;
+import net.runelite.client.plugins.cupidbot.util.dialogues.Rs2Dialogue;
 import net.runelite.client.plugins.cupidbot.util.equipment.Rs2Equipment;
 import net.runelite.client.plugins.cupidbot.util.inventory.Rs2Inventory;
 import net.runelite.client.plugins.cupidbot.util.inventory.Rs2ItemModel;
@@ -282,6 +284,10 @@ public class AutoFishingScript extends Script {
     }
 
     private void handleGettingGear() {
+        if (!dismissContinuePromptBeforeBanking()) {
+            return;
+        }
+
         if (Rs2Bank.walkToBankAndUseBank()) {
             for (String tool : selectedFish.getMethod().getRequiredItems()) {
                 if (!Rs2Inventory.hasItem(tool) && !Rs2Equipment.isWearing(tool)) {
@@ -316,6 +322,10 @@ public class AutoFishingScript extends Script {
     }
 
     private void handleDepositing() {
+        if (!dismissContinuePromptBeforeBanking()) {
+            return;
+        }
+
         if (Rs2Bank.walkToBankAndUseBank()) {
             // Use API: empty barrel (deposits its fish contents directly when bank open),
             // then deposit everything except the protected tools/harpoon/barrel using ids.
@@ -366,6 +376,31 @@ public class AutoFishingScript extends Script {
         if (Rs2Bank.isOpen()) Rs2Bank.closeBank();
         fishAction = "";
         fishingLocation = null;
+    }
+
+    /**
+     * A fishing level-up can open on the same tick that the inventory becomes full. The first
+     * minimap click then only dismisses the chatbox prompt instead of starting the bank walk.
+     * Clear it explicitly so the following walker click is always used for movement.
+     */
+    private boolean dismissContinuePromptBeforeBanking() {
+        if (!hasBlockingContinuePrompt()) {
+            return true;
+        }
+
+        log.debug("Dismissing continue prompt before banking");
+        if (Rs2Dialogue.hasContinue()) {
+            Rs2Dialogue.clickContinue();
+        } else {
+            // Rs2Dialogue does not classify the dedicated level-up panel as a dialogue.
+            Rs2Keyboard.keyPress(KeyEvent.VK_SPACE);
+        }
+        return sleepUntil(() -> !hasBlockingContinuePrompt(), 3000);
+    }
+
+    private boolean hasBlockingContinuePrompt() {
+        return Rs2Dialogue.hasContinue()
+                || Rs2Widget.isWidgetVisible(InterfaceID.LevelupDisplay.CONTINUE);
     }
 
     /**
