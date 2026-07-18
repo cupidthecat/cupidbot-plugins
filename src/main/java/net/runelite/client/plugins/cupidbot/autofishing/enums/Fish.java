@@ -23,6 +23,7 @@ public enum Fish {
     COD("Cod", List.of("Raw cod", "Cod", "Burnt fish"), FishingMethod.BIG_NET, FishingSpot.LOBSTER.getIds()),
     DARK_CRAB("Dark crab", List.of("Raw dark crab", "Dark crab", "Burnt dark crab"), FishingMethod.DARK_CRAB_BAIT, FishingSpot.DARK_CRAB.getIds()),
     HERRING("Herring", List.of("Raw herring", "Herring", "Burnt fish"), FishingMethod.BAIT, FishingSpot.SHRIMP.getIds()),
+    KARAMBWANJI("Karambwanji", List.of("Raw karambwanji"), FishingMethod.KARAMBWANJI_NET, FishingSpot.KARAMBWANJI.getIds()),
     KARAMBWAN("Karambwan", List.of("Raw karambwan", "Cooked karambwan", "Burnt karambwan"), FishingMethod.KARAMBWAN_VESSEL, FishingSpot.KARAMBWAN.getIds()),
     LAVA_EEL("Lava eel", List.of("Lava eel"), FishingMethod.OILY_ROD, FishingSpot.LAVA_EEL.getIds()),
     LOBSTER("Lobster", List.of("Raw lobster", "Lobster", "Burnt lobster"), FishingMethod.CAGE, FishingSpot.LOBSTER.getIds()),
@@ -100,6 +101,8 @@ public enum Fish {
                 return FishingSpot.SALMON;
             case MONKFISH:
                 return FishingSpot.MONKFISH;
+            case KARAMBWANJI:
+                return FishingSpot.KARAMBWANJI;
             case KARAMBWAN:
                 return FishingSpot.KARAMBWAN;
             case LAVA_EEL:

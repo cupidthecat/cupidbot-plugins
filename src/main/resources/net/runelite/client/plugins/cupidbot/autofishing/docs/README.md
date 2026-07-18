@@ -30,7 +30,7 @@ The **Auto Fishing Plugin** automates fishing with banking support and special a
 
 | Method   | Equipment Required | Bait Required | Fish Types |
 |----------|-------------------|---------------|------------|
-| **Net**  | Small fishing net | None          | Shrimp, Anchovies |
+| **Net**  | Small fishing net | None          | Shrimp, Anchovies, Karambwanji |
 | **Bait** | Fishing rod       | Fishing bait  | Sardine, Herring, Pike |
 | **Lure** | Fly fishing rod   | Feathers      | Trout, Salmon |
 | **Harpoon** | Harpoon        | None          | Tuna, Swordfish |

@@ -13,6 +13,7 @@ public enum FishingMethod {
     HARPOON(List.of("Harpoon"), List.of("Harpoon"), 35),
     CAGE(List.of("Cage"), List.of("Lobster pot"), 40),
     SANDWORMS(List.of("Sandworms", "Bait"), List.of("Fishing rod", "Sandworms"), 15),
+    KARAMBWANJI_NET(List.of("Net"), List.of("Small fishing net"), 5),
     KARAMBWAN_VESSEL(List.of("Fish"), List.of("Karambwan vessel", "Raw karambwanji"), 65),
     BARBARIAN_ROD(List.of("Use-rod"), List.of("Barbarian rod", "Feather"), 48),
     OILY_ROD(List.of("Bait"), List.of("Oily fishing rod", "Fishing bait"), 53),
