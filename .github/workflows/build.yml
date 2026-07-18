@@ -21,7 +21,32 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up JDK
+      - name: Checkout CupidBot client
+        uses: actions/checkout@v4
+        with:
+          repository: cupidthecat/cupidbot
+          ref: main
+          path: cupidbot-client
+
+      - name: Set up JDK 17 for CupidBot
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Build CupidBot client JAR
+        run: |
+          chmod +x cupidbot-client/gradlew
+          ./cupidbot-client/gradlew -p cupidbot-client :client:shadowJar
+
+          CLIENT_JAR=$(find "$GITHUB_WORKSPACE/cupidbot-client/runelite-client/build/libs" -maxdepth 1 -type f -name 'client-*-shaded.jar' -print -quit)
+          if [ -z "$CLIENT_JAR" ]; then
+            echo "CupidBot shaded client JAR was not produced" >&2
+            exit 1
+          fi
+          echo "CUPIDBOT_CLIENT_JAR=$CLIENT_JAR" >> "$GITHUB_ENV"
+
+      - name: Set up JDK 11 for plugins
         uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
@@ -31,13 +56,13 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build JARs
-        run: ./gradlew clean build -PpluginsReleaseTag=${{ env.PLUGINS_RELEASE_TAG }}
+        run: ./gradlew clean build -PpluginsReleaseTag=${{ env.PLUGINS_RELEASE_TAG }} -PcupidbotClientPath="$CUPIDBOT_CLIENT_JAR"
 
       - name: Generate plugin documentation
-        run: ./gradlew copyPluginDocs -PpluginsReleaseTag=${{ env.PLUGINS_RELEASE_TAG }}
+        run: ./gradlew copyPluginDocs -PpluginsReleaseTag=${{ env.PLUGINS_RELEASE_TAG }} -PcupidbotClientPath="$CUPIDBOT_CLIENT_JAR"
 
       - name: Generate plugins.json
-        run: ./gradlew generatePluginsJson -PpluginsReleaseTag=${{ env.PLUGINS_RELEASE_TAG }}
+        run: ./gradlew generatePluginsJson -PpluginsReleaseTag=${{ env.PLUGINS_RELEASE_TAG }} -PcupidbotClientPath="$CUPIDBOT_CLIENT_JAR"
 
       - name: Create/Update GitHub Release with JARs (latest-release)
         uses: ncipollo/release-action@v1
